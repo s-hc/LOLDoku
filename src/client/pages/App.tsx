@@ -1,9 +1,14 @@
 import HomePage from "./HomePage";
+import Navbar from "../components/Navbar";
+import MaxWidthWrapper from "../components/MaxWidthWrapper";
 
 function App() {
 	return (
 		<div>
-			<HomePage />
+			<Navbar />
+			<MaxWidthWrapper>
+				<HomePage />
+			</MaxWidthWrapper>
 		</div>
 	);
 }
