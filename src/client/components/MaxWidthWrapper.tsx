@@ -8,9 +8,9 @@ type Props = {
 /**
  * MaxWidthWrapper Component
  * Purpose:
- * - Component is designed to wrap child elements and provide them with consistent styling.
+ * - Component is designed to wrap child elements and provide them with consistent styling
  * - Ensures content is centered and constrained in width, which is useful for responsiveness
- * - Applies maximum width limit and horizontal padding, adapting values to screen size.
+ * - Applies maximum width limit and horizontal padding, adapting values to screen size
  *
  * How to Use:
  * - Wrap any element or components with 'MaxWidthWrapper' component.
@@ -26,7 +26,7 @@ type Props = {
  * - 'mx-auto' centers content horizontally
  * - 'w-full' ensures content takes up full width of parent container
  * - 'max-w-screen-xl' sets maximum width of content to match extra-large screen size breakpoint
- * - 'px-2.5 md:px-20' sets horizontal padding to 2.5rem, or 20rem on medium screen and larger
+ * - 'px-2.5 md:px-20' sets horizontal padding to 2.5px, or 20px on medium and larger screens
  */
 const MaxWidthWrapper = (props: Props) => {
 	const { className, children } = props;
