@@ -1,7 +1,6 @@
 {
   "name": "loldoku",
   "version": "1.0.0",
-  "description": "Multiplayer 4 person chess game",
   "main": "src/server/server.ts",
   "scripts": {
     "dev": "concurrently \"vite --host\" \"nodemon -r esm -e ts,json --exec ts-node src/server/server.ts\"",
