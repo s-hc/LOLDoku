@@ -1,12 +1,13 @@
 import { create } from "zustand";
 
-
-export interface BearState {
+export interface GuessesState {
   guesses: number
   decrease: () => void
+  reset: ()=>void
 }
 
-export const useBearStore = create<BearState>()((set) => ({
+export const useGuessesStore = create<GuessesState>()((set) => ({
 	guesses: 9,
 	decrease: () => set((state) => ({ guesses: state.guesses - 1 })),
+  reset: () => set((_) => ({ guesses: 0 })),
 }));

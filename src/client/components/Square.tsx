@@ -17,14 +17,14 @@ import {
 	CommandList,
 } from "@/client/components/ui/command";
 import champs from "../../server/demoChampList.json";
-import { useBearStore } from "../store/guesses_store";
+import { useGuessesStore } from "../store/guesses_store";
 
 type Props = {
 	champion: string,
 };
 
 const Square = ({ champion }: Props) => {
-	const decrease = useBearStore((state) => state.decrease);
+	const decrease = useGuessesStore((state) => state.decrease);
 
 	return (
 		<Dialog>
@@ -43,8 +43,8 @@ const Square = ({ champion }: Props) => {
 					<CommandList>
 						<CommandEmpty>No results found.</CommandEmpty>
 						<CommandGroup>
-							{champs.champions.map((ele, _) => (
-								<CommandItem>
+							{champs.champions.map((ele, ind) => (
+								<CommandItem key={`champNo${ind}`}>
 									<DialogClose className="size-full" onClick={() => decrease()}>
 										{ele}
 									</DialogClose>

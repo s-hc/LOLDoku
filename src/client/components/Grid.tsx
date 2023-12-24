@@ -8,7 +8,7 @@ const Grid = ({ answers }: Props) => {
 	return (
 		<div className="grid grid-rows-3 grid-flow-col gap-1 w-1/2 aspect-square mx-auto">
 			{answers.map((ele, ind) => (
-				<Square key={ind} champion={ele} />
+				<Square key={`square${ind}`} champion={ele} />
 			))}
 		</div>
 	);

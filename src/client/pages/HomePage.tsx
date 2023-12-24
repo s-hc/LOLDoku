@@ -1,10 +1,10 @@
 import Grid from "../components/Grid";
 import json from "../../server/demoData.json";
 import MaxWidthWrapper from "../components/MaxWidthWrapper";
-import { useBearStore } from "../store/guesses_store";
+import { useGuessesStore } from "../store/guesses_store";
 
 function HomePage() {
-	const guesses = useBearStore((state) => state.guesses);
+	const guesses = useGuessesStore((state) => state.guesses);
 
 	return (
 		<div className="homePage">
