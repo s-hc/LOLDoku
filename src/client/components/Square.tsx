@@ -6,20 +6,16 @@ import {
 	DialogHeader,
 	DialogTitle,
 	DialogTrigger,
-	DialogFooter,
 	DialogClose,
 } from "@/client/components/ui/dialog";
 
 import {
 	Command,
-	CommandDialog,
 	CommandEmpty,
 	CommandGroup,
 	CommandInput,
 	CommandItem,
 	CommandList,
-	CommandSeparator,
-	CommandShortcut,
 } from "@/client/components/ui/command";
 
 import champs from "../../server/demoChampList.json";
