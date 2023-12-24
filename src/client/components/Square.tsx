@@ -6,29 +6,26 @@ import {
 	DialogHeader,
 	DialogTitle,
 	DialogTrigger,
-	DialogFooter,
 	DialogClose,
 } from "@/client/components/ui/dialog";
-
 import {
 	Command,
-	CommandDialog,
 	CommandEmpty,
 	CommandGroup,
 	CommandInput,
 	CommandItem,
 	CommandList,
-	CommandSeparator,
-	CommandShortcut,
 } from "@/client/components/ui/command";
-
 import champs from "../../server/demoChampList.json";
+import { useBearStore } from "../store/guesses_store";
 
 type Props = {
 	champion: string,
 };
 
 const Square = ({ champion }: Props) => {
+	const decrease = useBearStore((state) => state.decrease);
+
 	return (
 		<Dialog>
 			<DialogTrigger asChild>
@@ -48,10 +45,7 @@ const Square = ({ champion }: Props) => {
 						<CommandGroup>
 							{champs.champions.map((ele, _) => (
 								<CommandItem>
-									<DialogClose
-										className="size-full"
-										onClick={() => console.log(ele)}
-									>
+									<DialogClose className="size-full" onClick={() => decrease()}>
 										{ele}
 									</DialogClose>
 								</CommandItem>
