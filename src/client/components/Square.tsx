@@ -1,15 +1,28 @@
-import {
-	AlertDialog,
-	AlertDialogAction,
-	AlertDialogCancel,
-	AlertDialogContent,
-	AlertDialogDescription,
-	AlertDialogFooter,
-	AlertDialogHeader,
-	AlertDialogTitle,
-	AlertDialogTrigger,
-} from "@/client/components/ui/alert-dialog";
 import { Button } from "@/client/components/ui/button";
+import {
+	Dialog,
+	DialogContent,
+	DialogDescription,
+	DialogHeader,
+	DialogTitle,
+	DialogTrigger,
+	DialogFooter,
+	DialogClose,
+} from "@/client/components/ui/dialog";
+
+import {
+	Command,
+	CommandDialog,
+	CommandEmpty,
+	CommandGroup,
+	CommandInput,
+	CommandItem,
+	CommandList,
+	CommandSeparator,
+	CommandShortcut,
+} from "@/client/components/ui/command";
+
+import champs from "../../server/demoChampList.json";
 
 type Props = {
 	champion: string,
@@ -17,21 +30,37 @@ type Props = {
 
 const Square = ({ champion }: Props) => {
 	return (
-		<AlertDialog>
-			<AlertDialogTrigger asChild>
-				<Button variant="outline" className="w-full aspect-square"></Button>
-			</AlertDialogTrigger>
-			<AlertDialogContent>
-				<AlertDialogHeader>
-					<AlertDialogTitle>Make your guess</AlertDialogTitle>
-					<AlertDialogDescription>{`you should guess ${champion}`}</AlertDialogDescription>
-				</AlertDialogHeader>
-				<AlertDialogFooter>
-					<AlertDialogCancel>Cancel</AlertDialogCancel>
-					<AlertDialogAction>Continue</AlertDialogAction>
-				</AlertDialogFooter>
-			</AlertDialogContent>
-		</AlertDialog>
+		<Dialog>
+			<DialogTrigger asChild>
+				<Button variant="outline" className="size-full"></Button>
+			</DialogTrigger>
+			<DialogContent>
+				<DialogHeader>
+					<DialogTitle>Make Your Guess</DialogTitle>
+					<DialogDescription>
+						{`you should guess ${champion}`}
+					</DialogDescription>
+				</DialogHeader>
+				<Command>
+					<CommandInput placeholder="Type a command or search..." />
+					<CommandList>
+						<CommandEmpty>No results found.</CommandEmpty>
+						<CommandGroup>
+							{champs.champions.map((ele, _) => (
+								<CommandItem>
+									<DialogClose
+										className="size-full"
+										onClick={() => console.log(ele)}
+									>
+										{ele}
+									</DialogClose>
+								</CommandItem>
+							))}
+						</CommandGroup>
+					</CommandList>
+				</Command>
+			</DialogContent>
+		</Dialog>
 	);
 };
 
