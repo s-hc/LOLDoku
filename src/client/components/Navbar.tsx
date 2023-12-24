@@ -62,6 +62,7 @@ const Navbar = () => {
 														<a
 															href="https://github.com/s-hc/LOLDoku"
 															className="text-blue-600 hover:text-blue-800"
+															target="_blank"
 														>
 															GitHub Project
 														</a>{" "}
@@ -84,6 +85,7 @@ const Navbar = () => {
 									<Link
 										to="https://github.com/s-hc/LOLDoku"
 										className={buttonVariants({ variant: "link" })}
+										target="_blank"
 									>
 										Github
 									</Link>
