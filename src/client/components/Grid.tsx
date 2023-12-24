@@ -6,7 +6,7 @@ type Props = {
 
 const Grid = ({ answers }: Props) => {
 	return (
-		<div className="grid grid-rows-3 grid-flow-col gap-1 w-1/2 aspect-square mx-auto">
+		<div className="row-start-2 row-span-3 col-span-3 grid grid-rows-3 grid-flow-col gap-1 aspect-square ">
 			{answers.map((ele, ind) => (
 				<Square key={`square${ind}`} champion={ele} />
 			))}
