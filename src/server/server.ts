@@ -1,6 +1,6 @@
 console.log("--> HELLO FROM SERVER.TS <--");
 import express, { Request, Response, NextFunction } from "express";
-import path from "path";
+import championRoutes from "./routes/championRoutes.js";
 
 const app = express();
 
@@ -9,9 +9,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // ROUTES
-app.get("/", (_req: Request, res: Response) => {
-	return res.status(200).sendFile(path.resolve("/index.html"));
-});
+app.use("/api", championRoutes);
 
 // UNKNOWN ROUTE HANDLER
 // !Todo: Create custom 404 page and serve
