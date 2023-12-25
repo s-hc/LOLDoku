@@ -24,10 +24,15 @@ LOLDoku is an open source spin on the classic Immaculate Grid using champions fr
 ## Features
 
 🌒 Dark Mode! Enjoy LOLDoku in your light or dark theme of choice.  
+
 📆 Daily puzzles! New puzzles are generated daily at midnight EST.  
+
 🔑 Secure GitHub and Google sign in! Sign in with your GitHub or Google account to access your stats and archived puzzles.  
+
 📐 Stats! Sign in to access your stats and archived puzzles.  
+
 👽 Leaderboards! See how you stack up against other players.  
+
 ✋ Open source! LOLDoku is open source and contributions are welcome.
 
 ## Game Rules
