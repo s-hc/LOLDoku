@@ -9,10 +9,11 @@ import {
 	DialogTitle,
 	DialogTrigger,
 } from "./ui/dialog";
+import { ModeToggle } from "./ModeToggle";
 
 const Navbar = () => {
 	return (
-		<div className="bg-white sticky z-50 top-0 inset-x-0 h-16">
+		<div className="sticky z-50 top-0 inset-x-0 h-16">
 			<header className="relative">
 				<MaxWidthWrapper>
 					<div className="border-b border-gray-200">
@@ -35,7 +36,7 @@ const Navbar = () => {
 												<DialogTitle className="text-center">
 													How to Play LolDoku
 												</DialogTitle>
-												<DialogDescription className="text-gray-600 text-sm md:text-base lg:text-lg font-normal leading-relaxed mt-4 mb-6">
+												<DialogDescription className="text-gray-500 text-sm md:text-base lg:text-lg font-normal leading-relaxed mt-4 mb-6">
 													<p className="mt-4 mb-4">
 														🟢 The goal of the game is to fill in all 9 boxes
 														with the correct League of Legends champion!
@@ -89,6 +90,8 @@ const Navbar = () => {
 									>
 										Github
 									</Link>
+									<span className="h-6 w-px bg-gray-200" aria-hidden="true" />
+									<ModeToggle />
 								</div>
 							</div>
 						</div>
