@@ -1,0 +1,51 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Champion {
+  id        Int     @id @unique @default(autoincrement())
+  name      String
+  image     Json
+  faction   Faction @relation(fields: [factionId], references: [id])
+  tags      Tag     @relation(fields: [tagId], references: [id])
+  factionId Int
+  tagId     Int
+}
+
+model Faction {
+  id          Int        @id @unique @default(autoincrement())
+  bandleCity  Boolean
+  bilgewater  Boolean
+  demacia     Boolean
+  freljord    Boolean
+  ionia       Boolean
+  ixtal       Boolean
+  mountTargon Boolean
+  noxus       Boolean
+  piltover    Boolean
+  runeterra   Boolean
+  shadowIsles Boolean
+  shurima     Boolean
+  void        Boolean
+  zaun        Boolean
+  Champion    Champion[]
+}
+
+model Tag {
+  id       Int        @id @unique @default(autoincrement())
+  assassin Boolean
+  fighter  Boolean
+  mage     Boolean
+  marksman Boolean
+  support  Boolean
+  tank     Boolean
+  Champion Champion[]
+}
