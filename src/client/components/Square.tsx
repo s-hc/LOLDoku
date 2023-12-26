@@ -18,25 +18,28 @@ import {
 } from "@/client/components/ui/command";
 import champs from "../../server/demoChampList.json";
 import { useGuessesStore } from "../store/guesses_store";
+import { useGridStore } from "../store/grid_store";
 
 type Props = {
-	champion: string,
+	champion: string | undefined,
+	answer: string,
+	squareNum: number,
 };
 
-const Square = ({ champion }: Props) => {
+const Square = ({ champion, answer, squareNum }: Props) => {
 	const decrease = useGuessesStore((state) => state.decrease);
-
+	const makeGuess = useGridStore((state) => state.makeGuess);
 	return (
 		<Dialog>
 			<DialogTrigger asChild>
-				<Button variant="outline" className="size-full"></Button>
+				<Button variant="outline" size={"lg"} className="size-full">
+					{champion ?? ""}
+				</Button>
 			</DialogTrigger>
 			<DialogContent>
 				<DialogHeader>
 					<DialogTitle>Make Your Guess</DialogTitle>
-					<DialogDescription>
-						{`you should guess ${champion}`}
-					</DialogDescription>
+					<DialogDescription>{`you should guess ${answer}`}</DialogDescription>
 				</DialogHeader>
 				<Command>
 					<CommandInput placeholder="Type a command or search..." />
@@ -45,7 +48,13 @@ const Square = ({ champion }: Props) => {
 						<CommandGroup>
 							{champs.champions.map((ele, ind) => (
 								<CommandItem key={`champNo${ind}`}>
-									<DialogClose className="size-full" onClick={() => decrease()}>
+									<DialogClose
+										className="size-full"
+										onClick={() => {
+											makeGuess(ele, squareNum);
+											decrease();
+										}}
+									>
 										{ele}
 									</DialogClose>
 								</CommandItem>
