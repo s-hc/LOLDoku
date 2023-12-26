@@ -5,6 +5,7 @@
  */
 
 import axios from "axios";
+import { db } from "../utils/db.server";
 
 /**
  * Dictionary for champion name exceptions.
@@ -92,4 +93,20 @@ export const fetchChampionData = async (): Promise<any> => {
 		console.error("Error fetching data:", error);
 		throw error;
 	}
+};
+
+/**
+ * Helper function to decide to skip entries or not
+ * @param championName
+ * @returns Promise<boolean>
+ */
+export const isTheChampionInTheDatabase = async (
+	championName: string
+): Promise<boolean> => {
+	const result = await db.champion.findFirst({
+		where: {
+			name: championName,
+		},
+	});
+	return !!result;
 };

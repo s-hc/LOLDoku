@@ -10,42 +10,25 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Champion {
-  id        Int      @id @unique @default(autoincrement())
-  name      String
-  image     Json
-  faction   Faction? @relation(fields: [factionId], references: [id])
-  tags      Tag?     @relation(fields: [tagId], references: [id])
-  factionId Int
-  tagId     Int
+model User {
+  id       Int    @id @unique @default(autoincrement())
+  username String @unique
 }
 
-model Faction {
-  id          Int        @id @unique @default(autoincrement())
-  bandleCity  Boolean
-  bilgewater  Boolean
-  demacia     Boolean
-  freljord    Boolean
-  ionia       Boolean
-  ixtal       Boolean
-  mountTargon Boolean
-  noxus       Boolean
-  piltover    Boolean
-  runeterra   Boolean
-  shadowIsles Boolean
-  shurima     Boolean
-  void        Boolean
-  zaun        Boolean
-  Champion    Champion[]
+model Champion {
+  id       Int     @id @unique @default(autoincrement())
+  name     String
+  image    Json
+  faction  String
+  tags     Tag?    @relation(fields: [tagId], references: [id])
+  resource String?
+
+  tagId Int
 }
 
 model Tag {
   id       Int        @id @unique @default(autoincrement())
-  assassin Boolean
-  fighter  Boolean
-  mage     Boolean
-  marksman Boolean
-  support  Boolean
-  tank     Boolean
+  tag1     String
+  tag2     String?
   Champion Champion[]
 }
