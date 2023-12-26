@@ -1,8 +1,8 @@
 import { Request, Response, NextFunction } from "express";
 import { fetchChampionData } from "../services/championService.js";
-import { Champions } from "../models/championModel.js";
-import { Factions } from "../models/factionsModel.js";
-import { Tags } from "../models/tagsModel.js";
+// import { Champions } from "../models/championModel.js";
+// import { Factions } from "../models/factionsModel.js";
+// import { Tags } from "../models/tagsModel.js";
 
 /**
  * Controller to handle the fetching of champion data.
@@ -109,7 +109,9 @@ export const cacheChampions = async (
  * Mock Data from getChampions
  * https://docs.google.com/document/d/1n1Hp7O9TYVDGzB1jpX7qgnLTOq_MMXieusS22x99eY4/edit?usp=sharing
  *
- * !TODO: Current issue is we need to (A) Update Champion or Create new Instance (is there a mongo thingy for that) and
+ * !TODO: Current issue is we need to 
+ *	  (A) Update Champion or Create new Instance (is there a mongo thingy for that)
+		There is a way to do this with prisma and realistically we can have a script run every 3 months or on command which will query everything for us
  *   !(B) Update Factions and Tags same idea...(if it doesn't already exist, we need to make it, but if it exists we add to it)
  *   ! Obviously this can be done through multiple queries (check if it exists and .then do extra stuff, but it would be nice to get it all done in one go)
  */
