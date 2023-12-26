@@ -3,11 +3,24 @@
  */
 
 import express, { Request, Response, NextFunction } from "express";
+import mongoose, { ConnectOptions } from "mongoose";
 import championRoutes from "./routes/championRoutes.js";
 
 console.log("--> HELLO FROM SERVER.TS <--");
 
 const app = express();
+
+/**
+ * Connect to MongoDB
+ */
+const MONGO_URI = "add_uri_here";
+	
+mongoose
+	.connect(MONGO_URI, {
+		dbName: "loldoku",
+	} as ConnectOptions)
+	.then(() => console.log("Connected to Mongo DB."))
+	.catch((err) => console.log(err));
 
 /**
  * - Middleware to parse incoming requests with JSON payloads and URL encoded payloads
