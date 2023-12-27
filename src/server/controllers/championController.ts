@@ -1,11 +1,10 @@
 import { Request, Response, NextFunction } from "express";
 import {
+	addNewChampionToDatabase,
 	fetchChampionData,
 	isTheChampionInTheDatabase,
+	modifyTagsToTag1Tag2,
 } from "../services/championService.js";
-import { db } from "../utils/db.server.js";
-import { nextTick } from "process";
-import { Champion } from "@prisma/client";
 
 /**
  * Controller to handle the fetching of champion data.
@@ -36,65 +35,26 @@ export const getChampions = async (
 
 // data is literally in your res.locals.champions
 
-/** Helper functions imported from championServices
- * isTheChampionInTheDatabase(<takes in champion name: string>): boolean
- */
-
-const someFunctionThatSaysWhatsNotInTheDatabase = (data) => {
-	//need to write a way to format the tags into true false values for all inputs
-	/**
-	 * might be better to go through and make the possibilities for now
-	 * My main question is how take string[] and make bool{} in an easy way
-	 * could default all to false
-	 * then go through making a new entry for each new combo or
-	 * if the combo exists add champ to existing champ array in new table
-	 *
-	 * yes doing that
-	 */
-	/*
-        create a new array of champions that need to be put into the database
-        const championsThatAreNotInTheDatabase = [];
-
-        Iterate through the champions{
-            check if the champion name is already in the database (probably an async function)
-
-            if it's not in the database 2 things need to happen:
-                1. We need to check what tags are on the champion to replace the array of strings with the correct Tag.id
-                2. We need to add the champion to the input array 
-            if(!isTheChampionInTheDatabase) {
-                const currentChampionTags:<not sure how to type this could use help on that> = {};
-                champion.tags.forEach(tag => {
-                    currentChampionTags[tag] = true
-                });
-                
-            }
-            it's not
-            create a table entry
-            fill out {name, image, faction, resource}
-        }
-        */
-};
-
-export const addNewChampionsToDatabase = async (
-	championsToBeAddedToDatabase: Champion[],
-	next: NextFunction
-) => {
-	console.log(
-		`<--Seeding ${championsToBeAddedToDatabase.length} champions into database.-->`
-	);
-	const champions = await db.champion.createMany({
-		data: championsToBeAddedToDatabase,
-	});
-	console.dir(champions, { depth: null }); //Will show full depth of objects
+export const cacheChampions = async (_req:Request,res:Response,next:NextFunction) => {
+	console.log("---In cacheChampions in championController.ts---");
+	for (const champion of res.locals.champions) {
+		//fresh pull from api
+		modifyTagsToTag1Tag2(champion);
+		//now it has 2 tags instead of 1 array
+		if(!isTheChampionInTheDatabase(champion)) {
+			//champ is not in database
+			addNewChampionToDatabase(champion);
+			//champ is in database but does the tags table look like?
+		}
+		console.log(`<--Finished processing ${champion.name}!!!!-->`)
+	}
 	next();
-};
-
+}
 // export const cacheChampions = async (
 // 	_req: Request,
 // 	res: Response,
 // 	next: NextFunction
 // ) => {
-// 	console.log("---In cacheChampions in championController.ts---");
 
 // 	// have data from res.locals.champions
 // 	for (const champion of res.locals.champions) {

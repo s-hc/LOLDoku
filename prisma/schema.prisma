@@ -6,8 +6,9 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
+  provider          = "postgresql"
+  url               = env("DATABASE_URL")
+  shadowDatabaseUrl = env("SHADOW_DATABASE_URL")
 }
 
 model User {
@@ -16,19 +17,19 @@ model User {
 }
 
 model Champion {
-  id       Int     @id @unique @default(autoincrement())
-  name     String
-  image    Json
-  faction  String
-  tags     Tag?    @relation(fields: [tagId], references: [id])
-  resource String?
-
-  tagId Int
+  id      Int    @id @unique @default(autoincrement())
+  name    String
+  image   Json
+  faction String
+  tag1Id  Int
+  tag1    Tag    @relation("Tag1ToChampion", fields: [tag1Id], references: [id])
+  tag2Id  Int
+  tag2    Tag    @relation("Tag2ToChampion", fields: [tag2Id], references: [id])
 }
 
 model Tag {
-  id       Int        @id @unique @default(autoincrement())
-  tag1     String
-  tag2     String?
-  Champion Champion[]
+  id         Int        @id @default(autoincrement())
+  tag        String
+  champions1 Champion[] @relation("Tag1ToChampion")
+  champions2 Champion[] @relation("Tag2ToChampion")
 }

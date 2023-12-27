@@ -6,6 +6,7 @@
 
 import axios from "axios";
 import { db } from "../utils/db.server";
+import { Champion } from "@prisma/client";
 
 /**
  * Dictionary for champion name exceptions.
@@ -97,16 +98,50 @@ export const fetchChampionData = async (): Promise<any> => {
 
 /**
  * Helper function to decide to skip entries or not
- * @param championName
+ * @param name
  * @returns Promise<boolean>
  */
 export const isTheChampionInTheDatabase = async (
-	championName: string
+	name: string
 ): Promise<boolean> => {
 	const result = await db.champion.findFirst({
 		where: {
-			name: championName,
+			name,
 		},
 	});
 	return !!result;
+};
+
+/**
+ * converts tags to tag1 and tag2
+ * This should only run if a champion still has the "tags" property instead of tag1, tag2.
+ * @param champion 
+ * @returns modified champion object
+ */
+export const modifyTagsToTag1Tag2 = (champion:any)=>{
+	console.log(`<--Modifying ${champion.name} tags-->`)
+	champion.tag1 = champion.tags[0];
+	champion.tags[1] ? champion.tag2 = champion.tags[1] : champion.tag2 = "null";
+	delete champion.tags;
+	return champion;
+}
+
+/**
+ * This function only adds new champions to the database
+ * @param championToBeAddedToDatabase This is the new champion
+ * @param next Express next function
+ */
+export const addNewChampionToDatabase = async (
+	championToBeAddedToDatabase: Champion,
+) => {
+	await db.champion.create({
+		data: championToBeAddedToDatabase,
+	})
+	.then(()=>{
+		console.log(`<--${championToBeAddedToDatabase.name}successfully added into database.-->`)
+	})
+	.catch((error:any)=>{
+		console.log(`<--Error adding ${championToBeAddedToDatabase.name} to database!-->`)
+		console.error(error)
+	})
 };
