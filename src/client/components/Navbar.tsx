@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
-import { buttonVariants } from "@/client/components/ui/button";
-import MaxWidthWrapper from "./MaxWidthWrapper";
+import { Button, buttonVariants } from "@/client/components/ui/button";
 import {
 	Dialog,
 	DialogContent,
@@ -10,8 +9,57 @@ import {
 	DialogTrigger,
 } from "./ui/dialog";
 import { ModeToggle } from "./ModeToggle";
+import MaxWidthWrapper from "./MaxWidthWrapper";
+import AuthenticationPage from "./Auth";
+import { Icons } from "../assets/icons";
+import { useEffect, useState } from "react";
+import { fetchUserData, logOut } from "../lib/utils";
+import {
+	DropdownMenu,
+	DropdownMenuContent,
+	DropdownMenuGroup,
+	DropdownMenuItem,
+	DropdownMenuSeparator,
+	DropdownMenuTrigger,
+} from "@radix-ui/react-dropdown-menu";
 
+export interface User {
+	name: string;
+	picture: string;
+}
+
+/**
+ * Represents the navigation bar of the application.
+ * This component includes links, authentication options, and a mode toggle.
+ *
+ * @returns {JSX.Element} The rendered navigation bar component.
+ */
 const Navbar = () => {
+	const [user, setUser] = useState<User | null>(null);
+
+	/**
+	 * Fetches user data on component mount and sets it to state.
+	 * Uses the `fetchUserData` utility function to get the current user's information.
+	 */
+	useEffect(() => {
+		if (!user) {
+			fetchUserData().then((data) => {
+				if (data) setUser(data);
+			});
+		}
+	}, [user, setUser]);
+
+	/**
+	 * Handles user logout.
+	 * Calls the `logOut` utility function and resets the user state.
+	 */
+	const userLogOut = async () => {
+		await logOut();
+		console.log("logging out");
+		setUser(null);
+		window.location.reload();
+	};
+
 	return (
 		<div className="sticky z-50 top-0 inset-x-0 h-16">
 			<header className="relative">
@@ -30,7 +78,12 @@ const Navbar = () => {
 							<div className="ml-auto flex items-center ">
 								<div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6 ">
 									<Dialog>
-										<DialogTrigger>Rules</DialogTrigger>
+										<DialogTrigger
+											className={buttonVariants({ variant: "outline" })}
+										>
+											<Icons.question className="mr-2 h-4 w-4" />
+											Rules
+										</DialogTrigger>
 										<DialogContent>
 											<DialogHeader>
 												<DialogTitle className="text-center">
@@ -82,16 +135,42 @@ const Navbar = () => {
 											</DialogHeader>
 										</DialogContent>
 									</Dialog>
-									<span className="h-6 w-px bg-gray-200" aria-hidden="true" />
-									<Link
-										to="https://github.com/s-hc/LOLDoku"
-										className={buttonVariants({ variant: "link" })}
-										target="_blank"
-									>
-										Github
-									</Link>
-									<span className="h-6 w-px bg-gray-200" aria-hidden="true" />
 									<ModeToggle />
+									<span className="h-6 w-px bg-gray-200" aria-hidden="true" />
+
+									{/* User Login */}
+									<div>
+										{user ? (
+											<DropdownMenu>
+												<DropdownMenuTrigger asChild>
+													<Button
+														variant="outline"
+														className="w-full space-x-3"
+													>
+														<img
+															src={user.picture}
+															alt="Profile"
+															className="h-6 w-6 rounded-full"
+														/>
+														<span>{user.name}</span>
+													</Button>
+												</DropdownMenuTrigger>
+												<DropdownMenuContent align="end">
+													<DropdownMenuSeparator />
+													<DropdownMenuGroup>
+														<DropdownMenuItem>
+															<Button variant="outline" onClick={userLogOut}>
+																Log Out
+															</Button>
+														</DropdownMenuItem>
+													</DropdownMenuGroup>
+													<DropdownMenuSeparator />
+												</DropdownMenuContent>
+											</DropdownMenu>
+										) : (
+											<AuthenticationPage />
+										)}
+									</div>
 								</div>
 							</div>
 						</div>
