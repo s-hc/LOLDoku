@@ -30,9 +30,16 @@ const Square = ({ champion, answer, squareNum }: Props) => {
 	const decrease = useGuessesStore((state) => state.decrease);
 	const makeGuess = useGridStore((state) => state.makeGuess);
 	return (
+		// <div className="border-solid border-2">{champion ?? ""}</div>
+
 		<Dialog>
 			<DialogTrigger asChild>
-				<Button variant="outline" size={"lg"} className="size-full">
+				<Button
+					variant="outline"
+					size={"lg"}
+					className="size-full"
+					// className="w-[calc(952px/5)] h-[calc(952px/5)] "
+				>
 					{champion ?? ""}
 				</Button>
 			</DialogTrigger>

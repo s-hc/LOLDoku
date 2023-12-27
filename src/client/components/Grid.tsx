@@ -8,7 +8,7 @@ type Props = {
 const Grid = ({ answers }: Props) => {
 	const gridArr = useGridStore((state) => state.grid);
 	return (
-		<div className="row-start-2 row-span-3 col-span-3 grid grid-rows-3 grid-flow-col gap-1 aspect-square ">
+		<div className="px-0 row-start-2 row-span-3 col-span-3 grid grid-cols-subgrid grid-flow-row gap-1 ">
 			{gridArr.map((ele, ind) => (
 				<Square
 					key={`square${ind}`}

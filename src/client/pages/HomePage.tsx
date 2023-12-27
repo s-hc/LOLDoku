@@ -14,7 +14,7 @@ function HomePage() {
 	return (
 		<div className="homePage">
 			<h1>Home Page</h1>
-			<MaxWidthWrapper className="grid grid-cols-5 grid-rows-4 grid-flow-row mx-auto">
+			<div className="grid grid-cols-5 grid-rows-5 grid-flow-row mx-auto aspect-square">
 				{rows.map((ele, ind) => (
 					<Button
 						disabled
@@ -38,7 +38,7 @@ function HomePage() {
 
 				<Grid answers={json.data} />
 				<div className="row-start-3 col-start-5">{`Guesses: ${guesses}`}</div>
-			</MaxWidthWrapper>
+			</div>
 		</div>
 	);
 }
