@@ -1,10 +1,24 @@
 import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
 
+/**
+ * Combines class names using clsx and tailwind-merge.
+ * This utility function takes multiple class values and merges them into a single string.
+ *
+ * @param {...ClassValue[]} inputs - An array of class values to be combined.
+ * @returns {string} The combined class names.
+ */
 export function cn(...inputs: ClassValue[]) {
 	return twMerge(clsx(inputs));
 }
 
+/**
+ * Fetches user data from the authentication server.
+ * Sends a request to the server to retrieve the current user's data.
+ *
+ * @async
+ * @returns {Promise<Object|null>} The user data object or null in case of an error.
+ */
 export async function fetchUserData() {
 	try {
 		const response = await fetch("http://localhost:3000/auth/get-user", {
@@ -20,6 +34,13 @@ export async function fetchUserData() {
 	}
 }
 
+/**
+ * Logs out the current user.
+ * Sends a request to the server to log out the current user.
+ *
+ * @async
+ * @returns {Promise<Object|null>} The response object or null in case of an error.
+ */
 export async function logOut() {
 	try {
 		const response = await fetch("http://localhost:3000/auth/logout", {

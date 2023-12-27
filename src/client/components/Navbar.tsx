@@ -28,9 +28,19 @@ export interface User {
 	picture: string;
 }
 
+/**
+ * Represents the navigation bar of the application.
+ * This component includes links, authentication options, and a mode toggle.
+ *
+ * @returns {JSX.Element} The rendered navigation bar component.
+ */
 const Navbar = () => {
 	const [user, setUser] = useState<User | null>(null);
 
+	/**
+	 * Fetches user data on component mount and sets it to state.
+	 * Uses the `fetchUserData` utility function to get the current user's information.
+	 */
 	useEffect(() => {
 		if (!user) {
 			fetchUserData().then((data) => {
@@ -39,13 +49,16 @@ const Navbar = () => {
 		}
 	}, [user, setUser]);
 
+	/**
+	 * Handles user logout.
+	 * Calls the `logOut` utility function and resets the user state.
+	 */
 	const userLogOut = async () => {
 		await logOut();
 		console.log("logging out");
 		setUser(null);
 		window.location.reload();
 	};
-	console.log(user);
 
 	return (
 		<div className="sticky z-50 top-0 inset-x-0 h-16">
@@ -155,22 +168,7 @@ const Navbar = () => {
 												</DropdownMenuContent>
 											</DropdownMenu>
 										) : (
-											<Dialog>
-												<DialogTrigger
-													className={buttonVariants({ variant: "secondary" })}
-												>
-													Login
-												</DialogTrigger>
-												<DialogContent className="text-center space-y-3 ">
-													<DialogTitle>Sign In</DialogTitle>
-													<DialogDescription>
-														Sign in for access to more features!
-													</DialogDescription>
-													<DialogDescription>
-														<AuthenticationPage />
-													</DialogDescription>
-												</DialogContent>
-											</Dialog>
+											<AuthenticationPage />
 										)}
 									</div>
 								</div>

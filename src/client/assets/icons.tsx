@@ -1,5 +1,10 @@
 type IconProps = React.HTMLAttributes<SVGElement>;
 
+/**
+ * Collection of SVG icon components.
+ * Each icon is a React functional component that takes `IconProps`.
+ */
+
 export const Icons = {
 	gitHub: (props: IconProps) => (
 		<svg viewBox="0 0 438.549 438.549" {...props}>
