@@ -3,22 +3,62 @@
  */
 
 import express, { Request, Response, NextFunction } from "express";
+import session from "express-session";
+import cookieParser from "cookie-parser";
+// import passport from "passport";
+import dotenv from "dotenv";
 import championRoutes from "./routes/championRoutes.js";
+import authRouter from "./routes/authRoutes.js";
 
 console.log("--> HELLO FROM SERVER.TS <--");
 
 const app = express();
+dotenv.config();
+
+/** Passport Configuration for when other OAUTH providers are added
+ * 
+// Passport configuration
+app.use(passport.initialize());
+app.use(passport.session());
+
+// Passport serialization
+passport.serializeUser((user: any, done) => {
+	done(null, user);
+});
+
+passport.deserializeUser((user: any, done) => {
+	done(null, user);
+});
+ *
+ */
 
 /**
- * - Middleware to parse incoming requests with JSON payloads and URL encoded payloads
+ * - Middleware to parse incoming requests with JSON, URL encoded, and cookie payloads
  */
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(cookieParser());
+app.use(
+	session({
+		secret: "SECRET",
+		resave: false,
+		saveUninitialized: true,
+		cookie: { secure: true },
+	})
+);
 
 /**
- * Route middleware to handle API routes for champions
+ * Routers to handle requests to the API
  */
 app.use("/api", championRoutes);
+app.use("/auth", authRouter);
+
+/**
+ * Route handlers
+ */
+app.get("/success", (_req: Request, res: Response) => {
+	res.redirect("http://localhost:5173/");
+});
 
 /**
  * Unknown route handler
