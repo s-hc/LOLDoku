@@ -8,7 +8,6 @@ import {
 	DialogTrigger,
 	DialogClose,
 } from "@/client/components/ui/dialog";
-
 import {
 	Command,
 	CommandEmpty,
@@ -17,36 +16,51 @@ import {
 	CommandItem,
 	CommandList,
 } from "@/client/components/ui/command";
-
 import champs from "../../server/demoChampList.json";
+import { useGuessesStore } from "../store/guesses_store";
+import { useGridStore } from "../store/grid_store";
 
 type Props = {
-	champion: string,
+	champion: string | undefined,
+	answer: string,
+	squareNum: number,
 };
 
-const Square = ({ champion }: Props) => {
+const Square = ({ champion, answer, squareNum }: Props) => {
+	const decrease = useGuessesStore((state) => state.decrease);
+	const makeGuess = useGridStore((state) => state.makeGuess);
 	return (
+		// <div className="border-solid border-2">{champion ?? ""}</div>
+
 		<Dialog>
 			<DialogTrigger asChild>
-				<Button variant="outline" className="size-full"></Button>
+				<Button
+					variant="outline"
+					size={"lg"}
+					className="size-full"
+					// className="w-[calc(952px/5)] h-[calc(952px/5)] "
+				>
+					{champion ?? ""}
+				</Button>
 			</DialogTrigger>
 			<DialogContent>
 				<DialogHeader>
 					<DialogTitle>Make Your Guess</DialogTitle>
-					<DialogDescription>
-						{`you should guess ${champion}`}
-					</DialogDescription>
+					<DialogDescription>{`you should guess ${answer}`}</DialogDescription>
 				</DialogHeader>
 				<Command>
 					<CommandInput placeholder="Type a command or search..." />
 					<CommandList>
 						<CommandEmpty>No results found.</CommandEmpty>
 						<CommandGroup>
-							{champs.champions.map((ele, _) => (
-								<CommandItem>
+							{champs.champions.map((ele, ind) => (
+								<CommandItem key={`champNo${ind}`}>
 									<DialogClose
 										className="size-full"
-										onClick={() => console.log(ele)}
+										onClick={() => {
+											makeGuess(ele, squareNum);
+											decrease();
+										}}
 									>
 										{ele}
 									</DialogClose>

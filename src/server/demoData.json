@@ -9,5 +9,7 @@
 		"poppy",
 		"aatrox",
 		"brand"
-	]
+	],
+	"columns": ["ionia", "yordle", "zaun"],
+	"rows": ["tank", "marksman", "assassin"]
 }
