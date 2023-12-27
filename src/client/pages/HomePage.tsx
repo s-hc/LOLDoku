@@ -12,7 +12,7 @@ function HomePage() {
 	const rowClass = ["row-start-2", "row-start-3", "row-start-4"];
 	const colClass = ["col-start-2", "col-start-3", "col-start-4"];
 	return (
-		<div className="homePage">
+		<MaxWidthWrapper>
 			<h1>Home Page</h1>
 			<div className="grid grid-cols-5 grid-rows-5 grid-flow-row mx-auto aspect-square">
 				{rows.map((ele, ind) => (
@@ -39,7 +39,7 @@ function HomePage() {
 				<Grid answers={json.data} />
 				<div className="row-start-3 col-start-5">{`Guesses: ${guesses}`}</div>
 			</div>
-		</div>
+		</MaxWidthWrapper>
 	);
 }
 
