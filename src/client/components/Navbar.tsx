@@ -97,12 +97,14 @@ const Navbar = () => {
 										>
 											Login
 										</DialogTrigger>
-										<DialogContent>
-											<DialogHeader>
-												<DialogDescription className="text-gray-500 text-sm md:text-base lg:text-lg font-normal leading-relaxed mt-4 mb-6">
-													<AuthenticationPage />
-												</DialogDescription>
-											</DialogHeader>
+										<DialogContent className="text-center space-y-3 ">
+											<DialogTitle>Sign In</DialogTitle>
+											<DialogDescription>
+												Sign in for access to more features!
+											</DialogDescription>
+											<DialogDescription>
+												<AuthenticationPage />
+											</DialogDescription>
 										</DialogContent>
 									</Dialog>
 								</div>
