@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { buttonVariants } from "@/client/components/ui/button";
-import MaxWidthWrapper from "./MaxWidthWrapper";
 import {
 	Dialog,
 	DialogContent,
@@ -10,6 +9,9 @@ import {
 	DialogTrigger,
 } from "./ui/dialog";
 import { ModeToggle } from "./ModeToggle";
+import MaxWidthWrapper from "./MaxWidthWrapper";
+import AuthenticationPage from "./Auth";
+import { Icons } from "../assets/icons";
 
 const Navbar = () => {
 	return (
@@ -30,7 +32,12 @@ const Navbar = () => {
 							<div className="ml-auto flex items-center ">
 								<div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6 ">
 									<Dialog>
-										<DialogTrigger>Rules</DialogTrigger>
+										<DialogTrigger
+											className={buttonVariants({ variant: "outline" })}
+										>
+											<Icons.question className="mr-2 h-4 w-4" />
+											Rules
+										</DialogTrigger>
 										<DialogContent>
 											<DialogHeader>
 												<DialogTitle className="text-center">
@@ -82,16 +89,22 @@ const Navbar = () => {
 											</DialogHeader>
 										</DialogContent>
 									</Dialog>
-									<span className="h-6 w-px bg-gray-200" aria-hidden="true" />
-									<Link
-										to="https://github.com/s-hc/LOLDoku"
-										className={buttonVariants({ variant: "link" })}
-										target="_blank"
-									>
-										Github
-									</Link>
-									<span className="h-6 w-px bg-gray-200" aria-hidden="true" />
 									<ModeToggle />
+									<span className="h-6 w-px bg-gray-200" aria-hidden="true" />
+									<Dialog>
+										<DialogTrigger
+											className={buttonVariants({ variant: "secondary" })}
+										>
+											Login
+										</DialogTrigger>
+										<DialogContent>
+											<DialogHeader>
+												<DialogDescription className="text-gray-500 text-sm md:text-base lg:text-lg font-normal leading-relaxed mt-4 mb-6">
+													<AuthenticationPage />
+												</DialogDescription>
+											</DialogHeader>
+										</DialogContent>
+									</Dialog>
 								</div>
 							</div>
 						</div>
