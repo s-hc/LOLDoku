@@ -5,7 +5,7 @@
  */
 
 import axios from "axios";
-import { db } from "../utils/db.server";
+import { db } from "../utils/db.server.js";
 import { Champion } from "@prisma/client";
 
 /**
