@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { buttonVariants } from "@/client/components/ui/button";
+import { Button, buttonVariants } from "@/client/components/ui/button";
 import {
 	Dialog,
 	DialogContent,
@@ -12,8 +12,41 @@ import { ModeToggle } from "./ModeToggle";
 import MaxWidthWrapper from "./MaxWidthWrapper";
 import AuthenticationPage from "./Auth";
 import { Icons } from "../assets/icons";
+import { useEffect, useState } from "react";
+import { fetchUserData, logOut } from "../lib/utils";
+import {
+	DropdownMenu,
+	DropdownMenuContent,
+	DropdownMenuGroup,
+	DropdownMenuItem,
+	DropdownMenuSeparator,
+	DropdownMenuTrigger,
+} from "@radix-ui/react-dropdown-menu";
+
+export interface User {
+	name: string;
+	picture: string;
+}
 
 const Navbar = () => {
+	const [user, setUser] = useState<User | null>(null);
+
+	useEffect(() => {
+		if (!user) {
+			fetchUserData().then((data) => {
+				if (data) setUser(data);
+			});
+		}
+	}, [user, setUser]);
+
+	const userLogOut = async () => {
+		await logOut();
+		console.log("logging out");
+		setUser(null);
+		window.location.reload();
+	};
+	console.log(user);
+
 	return (
 		<div className="sticky z-50 top-0 inset-x-0 h-16">
 			<header className="relative">
@@ -91,22 +124,55 @@ const Navbar = () => {
 									</Dialog>
 									<ModeToggle />
 									<span className="h-6 w-px bg-gray-200" aria-hidden="true" />
-									<Dialog>
-										<DialogTrigger
-											className={buttonVariants({ variant: "secondary" })}
-										>
-											Login
-										</DialogTrigger>
-										<DialogContent className="text-center space-y-3 ">
-											<DialogTitle>Sign In</DialogTitle>
-											<DialogDescription>
-												Sign in for access to more features!
-											</DialogDescription>
-											<DialogDescription>
-												<AuthenticationPage />
-											</DialogDescription>
-										</DialogContent>
-									</Dialog>
+
+									{/* User Login */}
+									<div>
+										{user ? (
+											<DropdownMenu>
+												<DropdownMenuTrigger asChild>
+													<Button
+														variant="outline"
+														className="w-full space-x-3"
+													>
+														<img
+															src={user.picture}
+															alt="Profile"
+															className="h-6 w-6 rounded-full"
+														/>
+														<span>{user.name}</span>
+													</Button>
+												</DropdownMenuTrigger>
+												<DropdownMenuContent align="end">
+													<DropdownMenuSeparator />
+													<DropdownMenuGroup>
+														<DropdownMenuItem>
+															<Button variant="outline" onClick={userLogOut}>
+																Log Out
+															</Button>
+														</DropdownMenuItem>
+													</DropdownMenuGroup>
+													<DropdownMenuSeparator />
+												</DropdownMenuContent>
+											</DropdownMenu>
+										) : (
+											<Dialog>
+												<DialogTrigger
+													className={buttonVariants({ variant: "secondary" })}
+												>
+													Login
+												</DialogTrigger>
+												<DialogContent className="text-center space-y-3 ">
+													<DialogTitle>Sign In</DialogTitle>
+													<DialogDescription>
+														Sign in for access to more features!
+													</DialogDescription>
+													<DialogDescription>
+														<AuthenticationPage />
+													</DialogDescription>
+												</DialogContent>
+											</Dialog>
+										)}
+									</div>
 								</div>
 							</div>
 						</div>
