@@ -1,7 +1,5 @@
-import React from "react";
 import { Icons } from "@/client/assets/icons";
 import { Button, buttonVariants } from "@/client/components/ui/button";
-import { useNavigate } from "react-router-dom";
 import {
 	Dialog,
 	DialogContent,
@@ -11,14 +9,12 @@ import {
 } from "./ui/dialog";
 
 /**
- * AuthenticationPage component
- * Renders a page for user authentication options for Google, Apple, and Github
+ * Authentication component
+ * Renders a component for user authentication options for Google, Apple, and Github
  * Currently, only Google authentication is functional
  * @returns {JSX.Element} The rendered authentication options component
  */
 export default function Authentication() {
-	const navigate = useNavigate();
-
 	const handleGoogleAuth = () => {
 		window.location.href = "http://localhost:3000/auth/google";
 	};
@@ -47,21 +43,27 @@ export default function Authentication() {
 						Sign in for access to more features!
 					</DialogDescription>
 					<DialogDescription>
-						<div className="mx-auto flex w-full flex-col justify-center space-y-4 sm:w-[350px]">
+						<span className="mx-auto flex w-full flex-col justify-center space-y-4 sm:w-[350px]">
 							<span className="relative inset-0 flex items-center w-full border-t" />
 							<Button variant="default" onClick={handleGoogleAuth}>
 								<Icons.google className="mr-2 h-4 w-4" />
 								Google
 							</Button>
-							<Button variant="destructive" onClick={() => navigate("/")}>
+							<Button
+								variant="destructive"
+								onClick={() => console.log("Apple...coming soon")}
+							>
 								<Icons.apple className="mr-2 h-4 w-4" />
 								Apple ... Coming Soon
 							</Button>
-							<Button variant="destructive" onClick={() => navigate("/")}>
+							<Button
+								variant="destructive"
+								onClick={() => console.log("GitHub...coming soon")}
+							>
 								<Icons.gitHub className="mr-2 h-4 w-4" />
 								GitHub ... Coming Soon
 							</Button>
-						</div>
+						</span>
 					</DialogDescription>
 				</DialogContent>
 			</Dialog>

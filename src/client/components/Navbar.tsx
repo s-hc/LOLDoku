@@ -90,28 +90,39 @@ const Navbar = () => {
 													How to Play LolDoku
 												</DialogTitle>
 												<DialogDescription className="text-gray-500 text-sm md:text-base lg:text-lg font-normal leading-relaxed mt-4 mb-6">
-													<p className="mt-4 mb-4">
+													<br />
+													<span className="mt-4 mb-4">
 														🟢 The goal of the game is to fill in all 9 boxes
 														with the correct League of Legends champion!
-													</p>
-													<p className="mb-4">
+													</span>
+													<br />
+													<br />
+													<span className="mb-4">
 														❤️ You have to do so with only 9 guesses so choose
 														wisely!
-													</p>
-													<p className="mb-4">
+													</span>{" "}
+													<br />
+													<br />
+													<span className="mb-4">
 														👀 Once you select a champion, you can't switch your
 														answer or reuse that champion.
-													</p>
-													<p className="mb-4">
+													</span>{" "}
+													<br />
+													<br />
+													<span className="mb-4">
 														😎 Your uniqueness score is all of your answer's
 														percentages added up. The percentages show you how
 														many players put the same correct answer as you. The
 														lower the score, the better!
-													</p>
-													<p className="mb-4">
+													</span>{" "}
+													<br />
+													<br />
+													<span className="mb-4">
 														🌔 New puzzles at midnight EST every day!
-													</p>
-													<p className="mb-4">
+													</span>{" "}
+													<br />
+													<br />
+													<span className="mb-4">
 														⭐ If you enjoyed, give our{" "}
 														<a
 															href="https://github.com/s-hc/LOLDoku"
@@ -121,8 +132,10 @@ const Navbar = () => {
 															GitHub Project
 														</a>{" "}
 														a star!
-													</p>
-													<p className="mb-4">
+													</span>{" "}
+													<br />
+													<br />
+													<span className="mb-4">
 														🦟 If you run into any bugs or have feedback:{" "}
 														<a
 															href="mailto:spartanhackers0+loldoku@gmail.com"
@@ -130,7 +143,7 @@ const Navbar = () => {
 														>
 															spartanhackers0+loldoku@gmail.com
 														</a>
-													</p>
+													</span>
 												</DialogDescription>
 											</DialogHeader>
 										</DialogContent>
