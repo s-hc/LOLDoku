@@ -19,6 +19,7 @@
 </div>
 <hr>
 <p align="center">
+  •
   <a href="#about">About</a>
   •
   <a href="#screenshots">Screenshots</a>
