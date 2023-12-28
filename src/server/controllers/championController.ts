@@ -41,89 +41,16 @@ export const cacheChampions = async (_req:Request,res:Response,next:NextFunction
 		//fresh pull from api
 		modifyTagsToTag1Tag2(champion);
 		//now it has 2 tags instead of 1 array
-		if(!isTheChampionInTheDatabase(champion)) {
+		const theChampionIsInTheDatabase = await isTheChampionInTheDatabase(champion.name)
+
+		if(!theChampionIsInTheDatabase) {
 			//champ is not in database
-			addNewChampionToDatabase(champion);
+			await addNewChampionToDatabase(champion);
 			//champ is in database but does the tags table look like?
 		}
-		console.log(`<--Finished processing ${champion.name}!!!!-->`)
 	}
 	next();
 }
-// export const cacheChampions = async (
-// 	_req: Request,
-// 	res: Response,
-// 	next: NextFunction
-// ) => {
-
-// 	// have data from res.locals.champions
-// 	for (const champion of res.locals.champions) {
-// 		const { faction, name, image, tags } = champion;
-
-// 		// Add Champion to Database
-// 		const newChampion = new Champions({ name, image, faction, tags });
-// 		newChampion
-// 			.save()
-// 			.then((savedChampion) => {
-// 				res.locals.champion = savedChampion;
-
-// 				// Add Champion to Faction
-// 				Factions.findOneAndUpdate(
-// 					{ factionName: faction },
-// 					{ $push: { champions: savedChampion._id } },
-// 					{ new: true }
-// 				)
-// 					.then(() => {
-// 						console.log("In findOneAndUpdate then block");
-// 						for (const tag of tags) {
-// 							Tags.findOneAndUpdate(
-// 								{ tagName: tag },
-// 								{ $push: { champions: savedChampion._id } },
-// 								{ new: true }
-// 							)
-// 								.then(() => {
-// 									console.log("In findOneAndUpdate then block for Tags");
-// 									return next();
-// 								})
-// 								.catch((err) => {
-// 									console.log(
-// 										"Error in findOneAndUpdate of Tags for",
-// 										tag,
-// 										": ",
-// 										err
-// 									);
-// 									return next({
-// 										log: "Error in findOneAndUpdate of Tags for",
-// 										status: 500,
-// 										message: { err: "An error occurred in saving tag" },
-// 									});
-// 								});
-// 						}
-// 					})
-// 					.catch((err) => {
-// 						console.log(
-// 							"Error in findOneAndUpdate of Faction for",
-// 							faction,
-// 							": ",
-// 							err
-// 						);
-// 						return next({
-// 							log: "Error in findOneAndUpdate of Faction for",
-// 							status: 500,
-// 							message: { err: "An error occurred in saving faction" },
-// 						});
-// 					});
-// 			})
-// 			.catch((err) => {
-// 				console.log("Error in save of Champion: ", err);
-// 				return next({
-// 					log: "Error in save of Champion in championController.ts",
-// 					status: 500,
-// 					message: { err: "An error occurred in saving champion" },
-// 				});
-// 			});
-// 	}
-// };
 
 /**
  * Mock Data from getChampions

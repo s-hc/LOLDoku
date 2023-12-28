@@ -6,7 +6,6 @@
 
 import axios from "axios";
 import { db } from "../utils/db.server.js";
-import { Champion } from "@prisma/client";
 
 /**
  * Dictionary for champion name exceptions.
@@ -132,13 +131,25 @@ export const modifyTagsToTag1Tag2 = (champion:any)=>{
  * @param next Express next function
  */
 export const addNewChampionToDatabase = async (
-	championToBeAddedToDatabase: Champion,
+	championToBeAddedToDatabase: any,
 ) => {
+	const{name, image, faction, resource, tag1, tag2} = championToBeAddedToDatabase;
 	await db.champion.create({
-		data: championToBeAddedToDatabase,
+		data: {
+			name,
+			image,
+			faction,
+			resource,
+			tag1: {
+				create: {tag: tag1}
+			},
+			tag2: {
+				create: {tag: tag2}
+			}
+		},
 	})
 	.then(()=>{
-		console.log(`<--${championToBeAddedToDatabase.name}successfully added into database.-->`)
+		console.log(`<--${championToBeAddedToDatabase.name} successfully added into database.-->`)
 	})
 	.catch((error:any)=>{
 		console.log(`<--Error adding ${championToBeAddedToDatabase.name} to database!-->`)

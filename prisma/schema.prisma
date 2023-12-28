@@ -17,14 +17,15 @@ model User {
 }
 
 model Champion {
-  id      Int    @id @unique @default(autoincrement())
-  name    String
-  image   Json
-  faction String
-  tag1Id  Int
-  tag1    Tag    @relation("Tag1ToChampion", fields: [tag1Id], references: [id])
-  tag2Id  Int
-  tag2    Tag    @relation("Tag2ToChampion", fields: [tag2Id], references: [id])
+  id       Int    @id @unique @default(autoincrement())
+  name     String
+  image    Json
+  faction  String
+  resource String
+  tag1Id   Int
+  tag1     Tag    @relation("Tag1ToChampion", fields: [tag1Id], references: [id])
+  tag2Id   Int
+  tag2     Tag    @relation("Tag2ToChampion", fields: [tag2Id], references: [id])
 }
 
 model Tag {
