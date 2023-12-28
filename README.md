@@ -1,53 +1,91 @@
-# LOLDoku
+<h1 align="center">
+  <br>
+  <img width=100% src="./src/client/assets/LOLDoku.png" alt="Valo Bot Banner">
+</h1>
 
-LOLDoku is an open source spin on the classic Immaculate Grid using champions from the popular MOBA game League of Legends. The goal of the game is to fill in the 3x3 grid with answers that match the clues given. New puzzles are generated daily, and users can sign in to access their stats and archived puzzles.
-
+<h4 align="center"> Immaculate Grid: League of Legends Edition</h4>
+<hr>
 <div align="center">
     <img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB" alt="React">
+    <img src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript">
     <img src="https://img.shields.io/badge/react%20zustand-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB" alt="React Zustand">
     <img src="https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js">
     <img src="https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB" alt="Express.js">
-    <img src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript">
     <img src="https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS">
     <img src="https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL">
-    <img src="https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white" alt="Vite">
+    <img src="https://img.shields.io/badge/Prisma-2D3748.svg?style=for-the-badge&logo=Prisma&logoColor=white" alt="Prisma">
+    <img src="https://img.shields.io/badge/MongoDB-47A248.svg?style=for-the-badge&logo=MongoDB&logoColor=white" alt="MongoDB">
+    <img src="https://img.shields.io/badge/Mongoose-F04D35.svg?style=for-the-badge&logo=Mongoose&logoColor=white" alt="Mongoose">
 </div>
+<hr>
+<p align="center">
+  <a href="#about">About</a>
+  •
+  <a href="#screenshots">Screenshots</a>
+  •
+  <a href="#features">Features</a>
+  •
+  <a href="#game-rules">Game Rules</a>
+  •
+  <a href="#installation-guide">Installation Guide</a>
+  •
+  <a href="#scripts">Contributions</a>
+  •
+  <a href="#schema">Schema</a>
+  •
+  <a href="#license">License</a>
+  •
+</p>
 
-## Table of Contents
+---
 
-1. [Features](#features)
-2. [Installation](#installation)
-3. [Scripts](#scripts)
-4. [Schema](#schema)
-5. [License](#license)
+## About
+
+LOLDoku is an open source spin on the classic Immaculate Grid using champions from the popular MOBA game League of Legends. The goal of the game is to fill in the 3x3 grid with answers that match the clues given. New puzzles are generated daily, and users can sign in (OAuth2.0) to access their stats and archived puzzles.
+
+> [!Important]
+>
+> LOLDoku is not endorsed by Riot Games and does not reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties.
+> Riot Games and all associated properties are trademarks or registered trademarks of Riot Games, Inc.
+
+## Screenshots
+
+<details>
+<summary> <b>Click to view Images</b> </summary> 
+<br>
+<b>Rules Modal:</b>
+<br>
+<img height="500" src="./assets/gamerules.png" alt="rules"/>
+
+<hr>
+</details>
+<br>
+<details>
+<summary> <b>Click to view GIFs</b> </summary>
+<br>
+<b>Google OAuth:</b>
+<br>
+<img src="#" alt="Google OAuth gif"/>
+</details>
+<br>
 
 ## Features
 
-🌒 Dark Mode! Enjoy LOLDoku in your light or dark theme of choice.  
+• Secure GitHub and Google sign in! Sign in with your GitHub or Google account to access your stats and archived puzzles.
 
-📆 Daily puzzles! New puzzles are generated daily at midnight EST.  
+• Dark Mode! Enjoy LOLDoku in your light or dark theme of choice.
 
-🔑 Secure GitHub and Google sign in! Sign in with your GitHub or Google account to access your stats and archived puzzles.  
+• Daily puzzles! New puzzles are generated daily at midnight EST.
 
-📐 Stats! Sign in to access your stats and archived puzzles.  
+• Uniqueness Score: Your uniqueness score is all of your answer's percentages added up. The percentages show you how many players put the same correct answer as you. The lower the score, the better!
 
-👽 Leaderboards! See how you stack up against other players.  
+• Stats! Sign in to access user stats and archived puzzles.
 
-✋ Open source! LOLDoku is open source and contributions are welcome.
+• Leaderboards! See how you stack up against other players.
 
-## Game Rules
+• If you run into any bugs or have feedback: [spartanhackers0+loldoku@gmail.com](mailto:spartanhackers0+loldoku@gmail.com)
 
-🟢 The goal of the game is to fill in all 9 boxes with the correct League of Legends champion!
-
-❤️ You have to do so with only 9 guesses so choose wisely.
-
-👀 Once you select a champion, you can't switch your answer or reuse that champion.
-
-😎 Your uniqueness score is all of your answer's percentages added up. The percentages show you how many players put the same correct answer as you. The lower the score, the better!
-
-🦟 If you run into any bugs or have feedback: [spartanhackers0+loldoku@gmail.com](mailto:spartanhackers0+loldoku@gmail.com)
-
-## Installation
+## Installation Guide
 
 1. Fork the LOLdoku repository to your own GitHub account.
 2. Clone the repository to your local environment.
