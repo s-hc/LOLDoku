@@ -35,7 +35,7 @@ export const getChampions = async (
 
 // data is literally in your res.locals.champions
 
-export const cacheChampions = async (_req:Request,res:Response,next:NextFunction) => {
+export const cacheChampions = async (_req: Request, res: Response, next: NextFunction) => {
 	console.log("---In cacheChampions in championController.ts---");
 	for (const champion of res.locals.champions) {
 		//fresh pull from api
@@ -46,7 +46,7 @@ export const cacheChampions = async (_req:Request,res:Response,next:NextFunction
 		if(!theChampionIsInTheDatabase) {
 			//champ is not in database
 			await addNewChampionToDatabase(champion);
-			//champ is in database but does the tags table look like?
+			//champ and associated tags are in database
 		}
 	}
 	next();
