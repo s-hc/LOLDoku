@@ -1,0 +1,2990 @@
+[
+	{
+		"name": "Aatrox",
+		"image": {
+			"title": "aatrox-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blta877c35110144de9/60ee0b25b9fc8939338c07ae/aatrox-splash.jpg",
+			"encoding": "image/jpeg",
+			"width": 1920,
+			"height": 1080,
+			"x": 1351,
+			"y": 346,
+			"featured-champions": []
+		},
+		"faction": "runeterra",
+		"tag1": "Fighter",
+		"tag2": "Tank"
+	},
+	{
+		"name": "Ahri",
+		"image": {
+			"title": "ahri-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/bltda668b66206f7f9e/60ee0b41cdb93c284ee3e936/Ahri_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 820,
+			"y": 105,
+			"featured-champions": []
+		},
+		"faction": "ionia",
+		"tag1": "Mage",
+		"tag2": "Assassin"
+	},
+	{
+		"name": "Akali",
+		"image": {
+			"title": "akali-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/bltadda3687d160dca6/60ee0b4666d52e63b8eb6b2f/Classic_Akali_Splash.jpg",
+			"encoding": "image/jpeg",
+			"width": 1920,
+			"height": 1080,
+			"x": 939,
+			"y": 162,
+			"featured-champions": []
+		},
+		"faction": "ionia",
+		"tag1": "Assassin",
+		"tag2": "null"
+	},
+	{
+		"name": "Akshan",
+		"image": {
+			"title": "akshan-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt5e69e0645890bf95/60ee0b48aa56744b33ce03ab/akshan-splash.jpg",
+			"encoding": "image/jpeg",
+			"width": 1920,
+			"height": 1080,
+			"x": 1300,
+			"y": 550,
+			"featured-champions": []
+		},
+		"faction": "shurima",
+		"tag1": "Marksman",
+		"tag2": "Assassin"
+	},
+	{
+		"name": "Alistar",
+		"image": {
+			"title": "alistar-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blte97d21767bea1e6b/60ee0b4b1f6a8d297d1d2113/Alistar_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 791,
+			"y": 139,
+			"featured-champions": []
+		},
+		"faction": "runeterra",
+		"tag1": "Tank",
+		"tag2": "Support"
+	},
+	{
+		"name": "Amumu",
+		"image": {
+			"title": "amumu-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt0d26d3c893fe7d48/60ee0b5085b0422843961375/Amumu_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 946,
+			"y": 75,
+			"featured-champions": []
+		},
+		"faction": "shurima",
+		"tag1": "Tank",
+		"tag2": "Mage"
+	},
+	{
+		"name": "Anivia",
+		"image": {
+			"title": "anivia-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt564c38e619cc505c/60ee0b53d42632662baee2bf/Anivia_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 715,
+			"y": 162,
+			"featured-champions": []
+		},
+		"faction": "freljord",
+		"tag1": "Mage",
+		"tag2": "Support"
+	},
+	{
+		"name": "Annie",
+		"image": {
+			"title": "annie-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt82bcfb363404fdb5/60ee0b65496a232835c1ff45/Annie_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 1161,
+			"y": 145,
+			"featured-champions": []
+		},
+		"faction": "runeterra",
+		"tag1": "Mage",
+		"tag2": "null"
+	},
+	{
+		"name": "Aphelios",
+		"image": {
+			"title": "aphelios-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt5b04d0076299c48f/60ee0b6960216d1db87a11cd/aphelios-splash.jpg",
+			"encoding": "image/jpeg",
+			"width": 1900,
+			"height": 1122,
+			"x": 996,
+			"y": 53,
+			"featured-champions": []
+		},
+		"faction": "mount-targon",
+		"tag1": "Marksman",
+		"tag2": "null"
+	},
+	{
+		"name": "Ashe",
+		"image": {
+			"title": "ashe-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt5388dc09a75213a1/60ee0b7912cadb2032d63aa7/Classic_Ashe_Splash.jpg",
+			"encoding": "image/jpeg",
+			"width": 1920,
+			"height": 974,
+			"x": 1333,
+			"y": 53,
+			"featured-champions": []
+		},
+		"faction": "freljord",
+		"tag1": "Marksman",
+		"tag2": "Support"
+	},
+	{
+		"name": "Aurelion Sol",
+		"image": {
+			"title": "aurelionsol-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/bltac9e6a0df59a974e/60ee0b8743739d6620a572d8/AurelionSol_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 687,
+			"y": 2,
+			"featured-champions": []
+		},
+		"faction": "runeterra",
+		"tag1": "Mage",
+		"tag2": "null"
+	},
+	{
+		"name": "Azir",
+		"image": {
+			"title": "azir-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt9035b786fd86e68d/60ee0b8d927567256a375e26/Azir_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 1026,
+			"y": 96,
+			"featured-champions": []
+		},
+		"faction": "shurima",
+		"tag1": "Mage",
+		"tag2": "Marksman"
+	},
+	{
+		"name": "Bard",
+		"image": {
+			"title": "bard-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt6730694cadd3ce90/60ee0ba4aa9be3239e98d8e4/Bard_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 770,
+			"y": 88,
+			"featured-champions": []
+		},
+		"faction": "runeterra",
+		"tag1": "Support",
+		"tag2": "Mage"
+	},
+	{
+		"name": "Bel’Veth",
+		"image": {
+			"title": "belveth-splash.jpg",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt318127f5a8847c16/62855e95ead0d2559909b064/belveth-splash.jpg",
+			"encoding": "image/jpeg",
+			"width": 1920,
+			"height": 1080,
+			"x": 900,
+			"y": 300,
+			"featured-champions": []
+		},
+		"faction": "void",
+		"tag1": "Fighter",
+		"tag2": "null"
+	},
+	{
+		"name": "Blitzcrank",
+		"image": {
+			"title": "blitzcrank-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt1487c53fac3d6842/60ee0be35397524ead3890bd/Blitzcrank_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 953,
+			"y": 113,
+			"featured-champions": []
+		},
+		"faction": "zaun",
+		"tag1": "Tank",
+		"tag2": "Fighter"
+	},
+	{
+		"name": "Brand",
+		"image": {
+			"title": "brand-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt7425b73d37e14379/60ee0be8fdd68748b2b7ccbe/Brand_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 1074,
+			"y": 50,
+			"featured-champions": []
+		},
+		"faction": "runeterra",
+		"tag1": "Mage",
+		"tag2": "null"
+	},
+	{
+		"name": "Braum",
+		"image": {
+			"title": "braum-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt4bc5fffe8811bf6a/60ee0bfc84a5742702dbc06c/Braum_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 1077,
+			"y": 26,
+			"featured-champions": []
+		},
+		"faction": "freljord",
+		"tag1": "Support",
+		"tag2": "Tank"
+	},
+	{
+		"name": "Briar",
+		"image": {
+			"title": "briar_splash.jpg",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt32fb981bef970760/64ee853a77e0ccf00a9db4f9/briar_splash.jpg",
+			"encoding": "image/jpeg",
+			"width": 1920,
+			"height": 1080,
+			"x": 1075,
+			"y": 300,
+			"featured-champions": []
+		},
+		"faction": "noxus",
+		"tag1": "Fighter",
+		"tag2": "Assassin"
+	},
+	{
+		"name": "Caitlyn",
+		"image": {
+			"title": "caitlyn-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/bltcd6fb377c05a2467/619bf377dd6fcd0cf294fd1f/Caitlyn_Base_Final_Adjustment.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 1024,
+			"y": 7,
+			"featured-champions": []
+		},
+		"faction": "piltover",
+		"tag1": "Marksman",
+		"tag2": "null"
+	},
+	{
+		"name": "Camille",
+		"image": {
+			"title": "camille-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/bltbd386a184535b43d/60ee0c0625b09b4bfcbdf519/camille_splash.jpg",
+			"encoding": "image/jpeg",
+			"width": 1024,
+			"height": 616,
+			"x": 969,
+			"y": 6,
+			"featured-champions": []
+		},
+		"faction": "piltover",
+		"tag1": "Fighter",
+		"tag2": "Tank"
+	},
+	{
+		"name": "Cassiopeia",
+		"image": {
+			"title": "cassiopeia-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blte6f2f7810e3c757c/60ee0c0ef7e95137f9d0488d/Cassiopeia_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 847,
+			"y": 55,
+			"featured-champions": []
+		},
+		"faction": "noxus",
+		"tag1": "Mage",
+		"tag2": "null"
+	},
+	{
+		"name": "Cho'Gath",
+		"image": {
+			"title": "chogath-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt458d2b6e6331cc3b/60ee0c320311fd25c98c2bb1/Chogath_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 714,
+			"y": 198,
+			"featured-champions": []
+		},
+		"faction": "void",
+		"tag1": "Tank",
+		"tag2": "Mage"
+	},
+	{
+		"name": "Corki",
+		"image": {
+			"title": "corki-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blta150bc0b57f21e72/60ee0c6ec326e45e15154d09/Corki_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 966,
+			"y": 91,
+			"featured-champions": []
+		},
+		"faction": "bandle-city",
+		"tag1": "Marksman",
+		"tag2": "null"
+	},
+	{
+		"name": "Darius",
+		"image": {
+			"title": "darius-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/bltf982b9e4117d5cc2/60ee0c7d33819c6236259c0f/Darius_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 745,
+			"y": 0,
+			"featured-champions": []
+		},
+		"faction": "noxus",
+		"tag1": "Fighter",
+		"tag2": "Tank"
+	},
+	{
+		"name": "Diana",
+		"image": {
+			"title": "diana-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/bltc235fa2b417ef7a4/60ee0cb166d52e63b8eb6b3f/Diana_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 945,
+			"y": 234,
+			"featured-champions": []
+		},
+		"faction": "mount-targon",
+		"tag1": "Fighter",
+		"tag2": "Mage"
+	},
+	{
+		"name": "Dr. Mundo",
+		"image": {
+			"title": "drmundo-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt1de6f1cc36193557/60ee0cc5a9af29474648beb5/mundo-splash.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 652,
+			"y": 68,
+			"featured-champions": []
+		},
+		"faction": "zaun",
+		"tag1": "Fighter",
+		"tag2": "Tank"
+	},
+	{
+		"name": "Draven",
+		"image": {
+			"title": "draven-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt36ae14be635e9bdc/60ee0cbf4b5f90610731956a/Draven_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 1025,
+			"y": 100,
+			"featured-champions": []
+		},
+		"faction": "noxus",
+		"tag1": "Marksman",
+		"tag2": "null"
+	},
+	{
+		"name": "Ekko",
+		"image": {
+			"title": "ekko-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt010cb09f412da7ab/60ee0cd412cadb2032d63ab3/Ekko_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 1061,
+			"y": 30,
+			"featured-champions": []
+		},
+		"faction": "zaun",
+		"tag1": "Assassin",
+		"tag2": "Fighter"
+	},
+	{
+		"name": "Elise",
+		"image": {
+			"title": "elise-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt941efa8bafc6e372/60ee0cdbb403be64e6627796/Elise_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 1007,
+			"y": 98,
+			"featured-champions": []
+		},
+		"faction": "shadow-isles",
+		"tag1": "Mage",
+		"tag2": "Fighter"
+	},
+	{
+		"name": "Evelynn",
+		"image": {
+			"title": "evelynn-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/bltcc9c3d044c357629/60ee0ce5f5c69126a364f900/evelynn-rework-splash.jpg",
+			"encoding": "image/jpeg",
+			"width": 1920,
+			"height": 1133,
+			"x": 983,
+			"y": 132,
+			"featured-champions": []
+		},
+		"faction": "runeterra",
+		"tag1": "Assassin",
+		"tag2": "Mage"
+	},
+	{
+		"name": "Ezreal",
+		"image": {
+			"title": "ezreal-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt701ca0d74cad88e2/60ee0cf283f3965f5b9868b8/Ezreal_splash.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 815,
+			"y": 141,
+			"featured-champions": []
+		},
+		"faction": "piltover",
+		"tag1": "Marksman",
+		"tag2": "Mage"
+	},
+	{
+		"name": "Fiddlesticks",
+		"image": {
+			"title": "fiddlesticks-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/bltecad43e1860aa6d1/60ee0d5783f3965f5b9868c0/fiddlesticks-splash.jpg",
+			"encoding": "image/jpeg",
+			"width": 1920,
+			"height": 1129,
+			"x": 703,
+			"y": 542,
+			"featured-champions": []
+		},
+		"faction": "runeterra",
+		"tag1": "Mage",
+		"tag2": "Support"
+	},
+	{
+		"name": "Fiora",
+		"image": {
+			"title": "fiora-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt3431e69df04282e5/60ee0d5e12cadb2032d63ac3/Fiora_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 864,
+			"y": 0,
+			"featured-champions": []
+		},
+		"faction": "demacia",
+		"tag1": "Fighter",
+		"tag2": "Assassin"
+	},
+	{
+		"name": "Fizz",
+		"image": {
+			"title": "fizz-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/bltf6341c794f5cefbd/60ee0d6494d70a1ef31237b5/Fizz_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 1180,
+			"y": 104,
+			"featured-champions": []
+		},
+		"faction": "runeterra",
+		"tag1": "Assassin",
+		"tag2": "Fighter"
+	},
+	{
+		"name": "Galio",
+		"image": {
+			"title": "galio-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt2552ecf89c99a831/60ee0da8c941f329772e4d87/Galio_updated_splash.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 588,
+			"y": 64,
+			"featured-champions": []
+		},
+		"faction": "demacia",
+		"tag1": "Tank",
+		"tag2": "Mage"
+	},
+	{
+		"name": "Gangplank",
+		"image": {
+			"title": "gangplank-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt36342e427842cf72/60ee0db41998302436df3459/Gangplank_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 838,
+			"y": 6,
+			"featured-champions": []
+		},
+		"faction": "bilgewater",
+		"tag1": "Fighter",
+		"tag2": "null"
+	},
+	{
+		"name": "Garen",
+		"image": {
+			"title": "garen-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/bltda4249a36a7acf13/60ee0dbd66d52e63b8eb6b4f/Garen_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 1137,
+			"y": 141,
+			"featured-champions": []
+		},
+		"faction": "demacia",
+		"tag1": "Fighter",
+		"tag2": "Tank"
+	},
+	{
+		"name": "Gnar",
+		"image": {
+			"title": "gnar-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt257549813773c72c/60ee0dcd2f7fa122fd5749ad/Gnar_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 1036,
+			"y": 485,
+			"featured-champions": []
+		},
+		"faction": "freljord",
+		"tag1": "Fighter",
+		"tag2": "Tank"
+	},
+	{
+		"name": "Gragas",
+		"image": {
+			"title": "gragas-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt6e6453bebfbb6803/60ee0dd8b23973202c8a72ee/Gragas_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 787,
+			"y": 12,
+			"featured-champions": []
+		},
+		"faction": "freljord",
+		"tag1": "Fighter",
+		"tag2": "Mage"
+	},
+	{
+		"name": "Graves",
+		"image": {
+			"title": "graves-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/bltde0587ff6bf8bfbb/60ee0ddcb3f12e2b0efe98c6/Graves_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 1021,
+			"y": 0,
+			"featured-champions": []
+		},
+		"faction": "bilgewater",
+		"tag1": "Marksman",
+		"tag2": "null"
+	},
+	{
+		"name": "Gwen",
+		"image": {
+			"title": "gwen-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/bltd2d5de6c83b3349f/60ee0ddefdc6795ca5848472/gwen-splash.jpg",
+			"encoding": "image/jpeg",
+			"width": 1920,
+			"height": 1133,
+			"x": 960,
+			"y": 240,
+			"featured-champions": []
+		},
+		"faction": "shadow-isles",
+		"tag1": "Fighter",
+		"tag2": "Assassin"
+	},
+	{
+		"name": "Hecarim",
+		"image": {
+			"title": "hecarim-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt122e5bde31a6f6fc/64eeb01462b319f69e85df92/Hecarim_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 760,
+			"y": 11,
+			"featured-champions": []
+		},
+		"faction": "shadow-isles",
+		"tag1": "Fighter",
+		"tag2": "Tank"
+	},
+	{
+		"name": "Heimerdinger",
+		"image": {
+			"title": "heimerdinger-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt5003985a072cb830/60ee0de7fae20a5b4faf0ac1/Heimerdinger_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 973,
+			"y": 248,
+			"featured-champions": []
+		},
+		"faction": "piltover",
+		"tag1": "Mage",
+		"tag2": "Support"
+	},
+	{
+		"name": "Hwei",
+		"image": {
+			"title": "hwei_splash.jpg",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/bltd7140a124d34af34/655c570e867c0b986238753e/hwei_splash.jpg",
+			"encoding": "image/jpeg",
+			"width": 1920,
+			"height": 1080,
+			"x": 1150,
+			"y": 250,
+			"featured-champions": []
+		},
+		"faction": "ionia",
+		"tag1": "Mage",
+		"tag2": "null"
+	},
+	{
+		"name": "Illaoi",
+		"image": {
+			"title": "illaoi-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/bltd2738fec0d2fc753/60ee0df3da02804b3fb7dbfe/Illaoi_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 781,
+			"y": 0,
+			"featured-champions": []
+		},
+		"faction": "bilgewater",
+		"tag1": "Fighter",
+		"tag2": "Tank"
+	},
+	{
+		"name": "Irelia",
+		"image": {
+			"title": "irelia-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt5093ac3980fc83a1/60ee0e2a4b5f906107319576/Classic_Irelia_Splash.jpg",
+			"encoding": "image/jpeg",
+			"width": 1920,
+			"height": 1071,
+			"x": 964,
+			"y": 124,
+			"featured-champions": []
+		},
+		"faction": "ionia",
+		"tag1": "Fighter",
+		"tag2": "Assassin"
+	},
+	{
+		"name": "Ivern",
+		"image": {
+			"title": "ivern-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt2b44c03ee6865bf4/60ee0e2fda02804b3fb7dc06/Ivern_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 569,
+			"y": 0,
+			"featured-champions": []
+		},
+		"faction": "ionia",
+		"tag1": "Support",
+		"tag2": "Mage"
+	},
+	{
+		"name": "Janna",
+		"image": {
+			"title": "janna-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt59b4d88baa20e44b/60ee0e3c191da52267d909ce/Janna_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 1113,
+			"y": 148,
+			"featured-champions": []
+		},
+		"faction": "zaun",
+		"tag1": "Support",
+		"tag2": "Mage"
+	},
+	{
+		"name": "Jarvan IV",
+		"image": {
+			"title": "jarvaniv-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt85139dddb9f3900d/60ee0e3fffbf2b3d46189dd2/JarvanIV_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 1011,
+			"y": 35,
+			"featured-champions": []
+		},
+		"faction": "demacia",
+		"tag1": "Tank",
+		"tag2": "Fighter"
+	},
+	{
+		"name": "Jax",
+		"image": {
+			"title": "jax_splash_new.jpg",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt3236c7fbb14463dd/652d70b37aecdf2f32596356/jax_splash_new.jpg",
+			"encoding": "image/jpeg",
+			"width": 1920,
+			"height": 1080,
+			"x": 1320,
+			"y": 350,
+			"featured-champions": []
+		},
+		"faction": "runeterra",
+		"tag1": "Fighter",
+		"tag2": "Assassin"
+	},
+	{
+		"name": "Jayce",
+		"image": {
+			"title": "jayce-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blta9f1899e82bb1965/60ee0e4ac019ad2aaa39a4d2/Jayce_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 1007,
+			"y": 182,
+			"featured-champions": []
+		},
+		"faction": "piltover",
+		"tag1": "Fighter",
+		"tag2": "Marksman"
+	},
+	{
+		"name": "Jhin",
+		"image": {
+			"title": "jhin-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blta9fe9fafd4648bf7/60ee0e54d8e2343c032d6420/Jhin_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 780,
+			"y": 2,
+			"featured-champions": []
+		},
+		"faction": "ionia",
+		"tag1": "Marksman",
+		"tag2": "Mage"
+	},
+	{
+		"name": "Jinx",
+		"image": {
+			"title": "jinx-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt107f004fd12ef551/60ee0e5f8258b32d83974da8/Jinx_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 901,
+			"y": 82,
+			"featured-champions": []
+		},
+		"faction": "zaun",
+		"tag1": "Marksman",
+		"tag2": "null"
+	},
+	{
+		"name": "Kai'Sa",
+		"image": {
+			"title": "kaisa-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/bltd8de2cd9f955bffc/60ee0e6b975ffd4ff25ec2ab/kaisa-splash.jpg",
+			"encoding": "image/jpeg",
+			"width": 1920,
+			"height": 1133,
+			"x": 950,
+			"y": 200,
+			"featured-champions": []
+		},
+		"faction": "void",
+		"tag1": "Marksman",
+		"tag2": "null"
+	},
+	{
+		"name": "Kalista",
+		"image": {
+			"title": "kalista-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt41c457170dee6402/60ee0e7409c9f73c0e83f82c/Kalista_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 926,
+			"y": 49,
+			"featured-champions": []
+		},
+		"faction": "shadow-isles",
+		"tag1": "Marksman",
+		"tag2": "null"
+	},
+	{
+		"name": "Karma",
+		"image": {
+			"title": "karma-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt59efc8ca56191daa/60ee0e7cb9fc8939338c07fc/Karma_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 1021,
+			"y": 11,
+			"featured-champions": []
+		},
+		"faction": "ionia",
+		"tag1": "Mage",
+		"tag2": "Support"
+	},
+	{
+		"name": "Karthus",
+		"image": {
+			"title": "karthus-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/bltebadd1f72b936e6f/60ee0e80730ed71c59413a91/Karthus_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 901,
+			"y": 0,
+			"featured-champions": []
+		},
+		"faction": "shadow-isles",
+		"tag1": "Mage",
+		"tag2": "null"
+	},
+	{
+		"name": "Kassadin",
+		"image": {
+			"title": "kassadin-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/bltd1b80f3e64d47c14/630029de15a3d2260228c8f9/kassadin-splash_v2.jpg",
+			"encoding": "image/jpeg",
+			"width": 1920,
+			"height": 1080,
+			"x": 1250,
+			"y": 100,
+			"featured-champions": []
+		},
+		"faction": "void",
+		"tag1": "Assassin",
+		"tag2": "Mage"
+	},
+	{
+		"name": "Katarina",
+		"image": {
+			"title": "katarina-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt3dafcae87ee7c45a/60ee0e8fa9af29474648beef/Katarina_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 822,
+			"y": 356,
+			"featured-champions": []
+		},
+		"faction": "noxus",
+		"tag1": "Assassin",
+		"tag2": "Mage"
+	},
+	{
+		"name": "Kayle",
+		"image": {
+			"title": "kayle-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt78cc3c4fc81259c7/60ee0e94496a232835c1ff8b/Kayle_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1920,
+			"height": 1149,
+			"x": 1704,
+			"y": 566,
+			"featured-champions": []
+		},
+		"faction": "demacia",
+		"tag1": "Fighter",
+		"tag2": "Support"
+	},
+	{
+		"name": "Kayn",
+		"image": {
+			"title": "kayn-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt8c19d1dbd195fa20/60ee0e9783f3965f5b9868f0/kayn-splash-resized.jpg",
+			"encoding": "image/jpeg",
+			"width": 1920,
+			"height": 1134,
+			"x": 975,
+			"y": 579,
+			"featured-champions": []
+		},
+		"faction": "ionia",
+		"tag1": "Fighter",
+		"tag2": "Assassin"
+	},
+	{
+		"name": "Kennen",
+		"image": {
+			"title": "kennen-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt8bc7354458cee91c/60ee0ef653fcad3d3ba6ee24/Kennen_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 1018,
+			"y": 37,
+			"featured-champions": []
+		},
+		"faction": "ionia",
+		"tag1": "Mage",
+		"tag2": "Marksman"
+	},
+	{
+		"name": "Kha'Zix",
+		"image": {
+			"title": "khazix-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt619b602796c258c4/60ee0efc60216d1db87a1219/Khazix_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 983,
+			"y": 231,
+			"featured-champions": []
+		},
+		"faction": "void",
+		"tag1": "Assassin",
+		"tag2": "null"
+	},
+	{
+		"name": "Kindred",
+		"image": {
+			"title": "kindred-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt63aee598eae2eab3/60ee0f0da466f726aa3fae4a/Kindred_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 983,
+			"y": 220,
+			"featured-champions": []
+		},
+		"faction": "runeterra",
+		"tag1": "Marksman",
+		"tag2": "null"
+	},
+	{
+		"name": "Kled",
+		"image": {
+			"title": "kled-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt413da705852a68d3/60ee0f125397524ead389119/Kled_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 1102,
+			"y": 4,
+			"featured-champions": []
+		},
+		"faction": "noxus",
+		"tag1": "Fighter",
+		"tag2": "Tank"
+	},
+	{
+		"name": "Kog'Maw",
+		"image": {
+			"title": "kogmaw-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/bltaee2891bd2416f03/60ee0f1544ff471db19c907f/KogMaw_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 887,
+			"y": 487,
+			"featured-champions": []
+		},
+		"faction": "void",
+		"tag1": "Marksman",
+		"tag2": "Mage"
+	},
+	{
+		"name": "K’Sante",
+		"image": {
+			"title": "ksante-splash.jpg",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt6da26580f18abc83/634de8f0b3f39b38fccfd283/ksante-splash.jpg",
+			"encoding": "image/jpeg",
+			"width": 1920,
+			"height": 1080,
+			"x": 650,
+			"y": 200,
+			"featured-champions": []
+		},
+		"faction": "shurima",
+		"tag1": "Tank",
+		"tag2": "Fighter"
+	},
+	{
+		"name": "LeBlanc",
+		"image": {
+			"title": "leblanc-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt4d91710a07d51938/60ee0f18975ffd4ff25ec2cf/Leblanc_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 934,
+			"y": 3,
+			"featured-champions": []
+		},
+		"faction": "noxus",
+		"tag1": "Assassin",
+		"tag2": "Mage"
+	},
+	{
+		"name": "Lee Sin",
+		"image": {
+			"title": "leesin-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt411308258673b2ff/60ee0f1b83f3965f5b986912/LeeSin_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 889,
+			"y": 0,
+			"featured-champions": []
+		},
+		"faction": "ionia",
+		"tag1": "Fighter",
+		"tag2": "Assassin"
+	},
+	{
+		"name": "Leona",
+		"image": {
+			"title": "leona-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt6a3490eb186aa2d8/60ee0f2325b09b4bfcbdf553/Leona_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 1061,
+			"y": 41,
+			"featured-champions": []
+		},
+		"faction": "mount-targon",
+		"tag1": "Tank",
+		"tag2": "Support"
+	},
+	{
+		"name": "Lillia",
+		"image": {
+			"title": "lillia-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt2560838ced20b5d5/60ee0f2925b09b4bfcbdf557/lillia-splash.jpg",
+			"encoding": "image/jpeg",
+			"width": 5000,
+			"height": 2950,
+			"x": 2255,
+			"y": 634,
+			"featured-champions": []
+		},
+		"faction": "ionia",
+		"tag1": "Fighter",
+		"tag2": "Mage"
+	},
+	{
+		"name": "Lissandra",
+		"image": {
+			"title": "lissandra-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/bltb746610319970ff5/60ee0f31c300f42b197f1cd3/Lissandra_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 930,
+			"y": 0,
+			"featured-champions": []
+		},
+		"faction": "freljord",
+		"tag1": "Mage",
+		"tag2": "null"
+	},
+	{
+		"name": "Lucian",
+		"image": {
+			"title": "lucian-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/bltd0d3d68533866389/60ee0f38e31ac858d22f9c61/Lucian_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 896,
+			"y": 267,
+			"featured-champions": []
+		},
+		"faction": "runeterra",
+		"tag1": "Marksman",
+		"tag2": "null"
+	},
+	{
+		"name": "Lulu",
+		"image": {
+			"title": "lulu-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt71009d4f4fabcf6f/60ee0f3fb898ee4eaeb6e6a7/Lulu_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 956,
+			"y": 173,
+			"featured-champions": []
+		},
+		"faction": "bandle-city",
+		"tag1": "Support",
+		"tag2": "Mage"
+	},
+	{
+		"name": "Lux",
+		"image": {
+			"title": "lux-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt9f9df38e50f393d4/60ee0f4c5eda9722617c575e/Lux_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 784,
+			"y": 51,
+			"featured-champions": []
+		},
+		"faction": "demacia",
+		"tag1": "Mage",
+		"tag2": "Support"
+	},
+	{
+		"name": "Malphite",
+		"image": {
+			"title": "malphite-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt78c8355477d986b9/60ee0f4f5397524ead389121/Malphite_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 933,
+			"y": 403,
+			"featured-champions": []
+		},
+		"faction": "ixtal",
+		"tag1": "Tank",
+		"tag2": "Fighter"
+	},
+	{
+		"name": "Malzahar",
+		"image": {
+			"title": "malzahar-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/bltce9a57d8c8420d0d/60ee0f520311fd25c98c2c09/Malzahar_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 851,
+			"y": 0,
+			"featured-champions": []
+		},
+		"faction": "void",
+		"tag1": "Mage",
+		"tag2": "Assassin"
+	},
+	{
+		"name": "Maokai",
+		"image": {
+			"title": "maokai-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/bltff54a47e019fbd69/60ee0f56730ed71c59413ab7/Maokai_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 897,
+			"y": 156,
+			"featured-champions": []
+		},
+		"faction": "shadow-isles",
+		"tag1": "Tank",
+		"tag2": "Mage"
+	},
+	{
+		"name": "Master Yi",
+		"image": {
+			"title": "masteryi-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/bltbb309d26fffe4e63/60ee0f5d92a06d2970b8b550/MasterYi_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 1145,
+			"y": 99,
+			"featured-champions": []
+		},
+		"faction": "ionia",
+		"tag1": "Assassin",
+		"tag2": "Fighter"
+	},
+	{
+		"name": "Milio",
+		"image": {
+			"title": "milio-splash.jpg",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt2f1275d887c9755f/640233a082b5176dad09a78f/milio-splash.jpg",
+			"encoding": "image/jpeg",
+			"width": 1920,
+			"height": 1080,
+			"x": 950,
+			"y": 350,
+			"featured-champions": []
+		},
+		"faction": "ixtal",
+		"tag1": "Support",
+		"tag2": "null"
+	},
+	{
+		"name": "Miss Fortune",
+		"image": {
+			"title": "missfortune-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/bltc6e788b11a9c8245/60ee0f71a86d0f5a0be449a3/MissFortune_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 983,
+			"y": 231,
+			"featured-champions": []
+		},
+		"faction": "bilgewater",
+		"tag1": "Marksman",
+		"tag2": "null"
+	},
+	{
+		"name": "Mordekaiser",
+		"image": {
+			"title": "mordekaiser-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt626d0a9a6c259304/60ee0f7b39cbdb45e8c4803c/Classic_Mordekaiser_Splash.jpg",
+			"encoding": "image/jpeg",
+			"width": 5146,
+			"height": 2780,
+			"x": 2356,
+			"y": 222,
+			"featured-champions": []
+		},
+		"faction": "noxus",
+		"tag1": "Fighter",
+		"tag2": "null"
+	},
+	{
+		"name": "Morgana",
+		"image": {
+			"title": "morgana-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/bltb14610adaae5befa/60ee0f7e43739d6620a57338/Morgana_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1919,
+			"height": 1149,
+			"x": 1704,
+			"y": 566,
+			"featured-champions": []
+		},
+		"faction": "demacia",
+		"tag1": "Mage",
+		"tag2": "Support"
+	},
+	{
+		"name": "Naafiri",
+		"image": {
+			"title": "naafiri-splash.jpg",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt4b3b126b9263f6e9/64954be5bcdab071d23bdff2/naafiri-splash.jpg",
+			"encoding": "image/jpeg",
+			"width": 1920,
+			"height": 1080,
+			"x": 620,
+			"y": 550,
+			"featured-champions": []
+		},
+		"faction": "shurima",
+		"tag1": "Assassin",
+		"tag2": "null"
+	},
+	{
+		"name": "Nami",
+		"image": {
+			"title": "nami-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt407f319931b9b1ec/60ee0fc7855e1f64f143efe4/Nami_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 1109,
+			"y": 110,
+			"featured-champions": []
+		},
+		"faction": "runeterra",
+		"tag1": "Support",
+		"tag2": "Mage"
+	},
+	{
+		"name": "Nasus",
+		"image": {
+			"title": "nasus-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/bltc33731e926616bc3/60ee0fcea86d0f5a0be449af/Nasus_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 889,
+			"y": 40,
+			"featured-champions": []
+		},
+		"faction": "shurima",
+		"tag1": "Fighter",
+		"tag2": "Tank"
+	},
+	{
+		"name": "Nautilus",
+		"image": {
+			"title": "nautilus-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt758bc6307b613946/60ee0fd285b04228439613d5/Nautilus_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 1075,
+			"y": 4,
+			"featured-champions": []
+		},
+		"faction": "bilgewater",
+		"tag1": "Tank",
+		"tag2": "Support"
+	},
+	{
+		"name": "Neeko",
+		"image": {
+			"title": "neeko-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/bltc69856688a968e30/60ee0fd65eda9722617c5770/neeko-splash.jpg",
+			"encoding": "image/jpeg",
+			"width": 1920,
+			"height": 1133,
+			"x": 842,
+			"y": 24,
+			"featured-champions": []
+		},
+		"faction": "ixtal",
+		"tag1": "Mage",
+		"tag2": "Support"
+	},
+	{
+		"name": "Nidalee",
+		"image": {
+			"title": "nidalee-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blta65bbcd489ac4d4e/60ee0fde47e9392c538205a5/Nidalee_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 1019,
+			"y": 11,
+			"featured-champions": []
+		},
+		"faction": "ixtal",
+		"tag1": "Assassin",
+		"tag2": "Mage"
+	},
+	{
+		"name": "Nilah",
+		"image": {
+			"title": "nilah-splash.jpg",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blte7e5b6d5c50cf732/62b1f70605f1d157f3a8cc78/nilah-splash.jpg",
+			"encoding": "image/jpeg",
+			"width": 1920,
+			"height": 1080,
+			"x": 1200,
+			"y": 300,
+			"featured-champions": []
+		},
+		"faction": "bilgewater",
+		"tag1": "Fighter",
+		"tag2": "Assassin"
+	},
+	{
+		"name": "Nocturne",
+		"image": {
+			"title": "nocturne-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/bltd965a4717b06eef3/60ee0fe2b1e20a5e8ab58595/Nocturne_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 870,
+			"y": 208,
+			"featured-champions": []
+		},
+		"faction": "runeterra",
+		"tag1": "Assassin",
+		"tag2": "Fighter"
+	},
+	{
+		"name": "Nunu & Willump",
+		"image": {
+			"title": "nunu-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt988c23cebcb14f78/60ee100866d52e63b8eb6ba7/nunu_new_splash.jpg",
+			"encoding": "image/jpeg",
+			"width": 1920,
+			"height": 1150,
+			"x": 1324,
+			"y": 729,
+			"featured-champions": []
+		},
+		"faction": "freljord",
+		"tag1": "Tank",
+		"tag2": "Fighter"
+	},
+	{
+		"name": "Olaf",
+		"image": {
+			"title": "olaf-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt121dcc1ff9f83f58/60ee107ba466f726aa3fae9c/Olaf_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 815,
+			"y": 67,
+			"featured-champions": []
+		},
+		"faction": "freljord",
+		"tag1": "Fighter",
+		"tag2": "Tank"
+	},
+	{
+		"name": "Orianna",
+		"image": {
+			"title": "orianna-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt8bde2f92f5419aa3/60ee1080cfb8f23a9413d227/Orianna_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 1080,
+			"y": 0,
+			"featured-champions": []
+		},
+		"faction": "piltover",
+		"tag1": "Mage",
+		"tag2": "Support"
+	},
+	{
+		"name": "Ornn",
+		"image": {
+			"title": "ornn-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/bltdf55bc487bced1a5/60ee1087191da52267d90a30/ornn-splash.jpg",
+			"encoding": "image/jpeg",
+			"width": 1920,
+			"height": 1080,
+			"x": 949,
+			"y": 328,
+			"featured-champions": []
+		},
+		"faction": "freljord",
+		"tag1": "Tank",
+		"tag2": "Fighter"
+	},
+	{
+		"name": "Pantheon",
+		"image": {
+			"title": "pantheon-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt8c02ab1e736da4a3/60ee108e8258b32d83974df0/pantheon_splash.jpg",
+			"encoding": "image/jpeg",
+			"width": 1080,
+			"height": 637,
+			"x": 556,
+			"y": 230,
+			"featured-champions": []
+		},
+		"faction": "mount-targon",
+		"tag1": "Fighter",
+		"tag2": "Assassin"
+	},
+	{
+		"name": "Poppy",
+		"image": {
+			"title": "poppy-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt67bf8a3bc7bca663/60ee111142236548511f8bd6/Poppy_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 873,
+			"y": 3,
+			"featured-champions": []
+		},
+		"faction": "demacia",
+		"tag1": "Tank",
+		"tag2": "Fighter"
+	},
+	{
+		"name": "Pyke",
+		"image": {
+			"title": "pyke-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt359f81b2f47d8434/60ee11234be40c60fcda6d20/champion-pyke-splash.jpg",
+			"encoding": "image/jpeg",
+			"width": 1920,
+			"height": 1080,
+			"x": 949,
+			"y": 240,
+			"featured-champions": []
+		},
+		"faction": "bilgewater",
+		"tag1": "Support",
+		"tag2": "Assassin"
+	},
+	{
+		"name": "Qiyana",
+		"image": {
+			"title": "qiyana-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt80f762fa9307cbce/60ee11277a84715a12c2a2f1/qiyana_splash.jpg",
+			"encoding": "image/jpeg",
+			"width": 4000,
+			"height": 2348,
+			"x": 2024,
+			"y": 551,
+			"featured-champions": []
+		},
+		"faction": "ixtal",
+		"tag1": "Assassin",
+		"tag2": "Fighter"
+	},
+	{
+		"name": "Quinn",
+		"image": {
+			"title": "quinn-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt5a13ce23b83464b4/60ee11324b5f906107319612/Quinn_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 800,
+			"y": 6,
+			"featured-champions": []
+		},
+		"faction": "demacia",
+		"tag1": "Marksman",
+		"tag2": "Assassin"
+	},
+	{
+		"name": "Rakan",
+		"image": {
+			"title": "rakan-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/bltf675f7e15a5650c9/60fb517a09d2d24585266cf2/rakan-splash.jpg",
+			"encoding": "image/jpeg",
+			"width": 2792,
+			"height": 1080,
+			"x": 1047,
+			"y": 108,
+			"featured-champions": []
+		},
+		"faction": "ionia",
+		"tag1": "Support",
+		"tag2": "null"
+	},
+	{
+		"name": "Rammus",
+		"image": {
+			"title": "rammus-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt2f2f946c24f77ce1/60ee1142ffbf2b3d46189e30/Rammus_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 779,
+			"y": 209,
+			"featured-champions": []
+		},
+		"faction": "shurima",
+		"tag1": "Tank",
+		"tag2": "Fighter"
+	},
+	{
+		"name": "Rek'Sai",
+		"image": {
+			"title": "reksai-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blta50d60e9cdac9abf/60ee114866d52e63b8eb6bdb/RekSai_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 728,
+			"y": 193,
+			"featured-champions": []
+		},
+		"faction": "void",
+		"tag1": "Fighter",
+		"tag2": "null"
+	},
+	{
+		"name": "Rell",
+		"image": {
+			"title": "rell-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt1e406701ff4575e0/60ee114c44ff471db19c90c5/rell-splash.jpg",
+			"encoding": "image/jpeg",
+			"width": 1919,
+			"height": 1038,
+			"x": 930,
+			"y": 132,
+			"featured-champions": []
+		},
+		"faction": "noxus",
+		"tag1": "Tank",
+		"tag2": "Support"
+	},
+	{
+		"name": "Renata Glasc",
+		"image": {
+			"title": "renata-splash.jpg",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/bltbd6dd8aaf7e19b67/61f873ffddbb853fe258b674/renata-splash.jpg",
+			"encoding": "image/jpeg",
+			"width": 1920,
+			"height": 1080,
+			"x": 1000,
+			"y": 150,
+			"featured-champions": []
+		},
+		"faction": "zaun",
+		"tag1": "Support",
+		"tag2": "Mage"
+	},
+	{
+		"name": "Renekton",
+		"image": {
+			"title": "renekton-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt9cc0bcde424bd35d/60ee114fc019ad2aaa39a54a/Renekton_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 801,
+			"y": 6,
+			"featured-champions": []
+		},
+		"faction": "shurima",
+		"tag1": "Fighter",
+		"tag2": "Tank"
+	},
+	{
+		"name": "Rengar",
+		"image": {
+			"title": "rengar-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt4c3e514b7691fbf8/60ee115b418ee7283c2e76d8/Rengar_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 900,
+			"y": 141,
+			"featured-champions": []
+		},
+		"faction": "ixtal",
+		"tag1": "Assassin",
+		"tag2": "Fighter"
+	},
+	{
+		"name": "Riven",
+		"image": {
+			"title": "riven-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt2a5d8ceded307ef1/60ee117385b0422843961415/Riven_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 1047,
+			"y": 2,
+			"featured-champions": []
+		},
+		"faction": "noxus",
+		"tag1": "Fighter",
+		"tag2": "Assassin"
+	},
+	{
+		"name": "Rumble",
+		"image": {
+			"title": "rumble-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt8c4561912c5cb524/60ee117eb1e20a5e8ab585cb/Rumble_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 968,
+			"y": 6,
+			"featured-champions": []
+		},
+		"faction": "bandle-city",
+		"tag1": "Fighter",
+		"tag2": "Mage"
+	},
+	{
+		"name": "Ryze",
+		"image": {
+			"title": "ryze-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt0f94a1afd3aca898/60ee1191d42632662baee33b/Ryze_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 1025,
+			"y": 252,
+			"featured-champions": []
+		},
+		"faction": "runeterra",
+		"tag1": "Mage",
+		"tag2": "Fighter"
+	},
+	{
+		"name": "Samira",
+		"image": {
+			"title": "samira-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/bltde2d1b2dbdc0b2cf/60ee11958258b32d83974e10/samira-splash.jpg",
+			"encoding": "image/jpeg",
+			"width": 1920,
+			"height": 1100,
+			"x": 1134,
+			"y": 102,
+			"featured-champions": []
+		},
+		"faction": "noxus",
+		"tag1": "Marksman",
+		"tag2": "null"
+	},
+	{
+		"name": "Sejuani",
+		"image": {
+			"title": "sejuani-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/bltd786c978e7beea7b/60ee119e9f5cda1efaa7f795/Sejuani_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 739,
+			"y": 3,
+			"featured-champions": []
+		},
+		"faction": "freljord",
+		"tag1": "Tank",
+		"tag2": "Fighter"
+	},
+	{
+		"name": "Senna",
+		"image": {
+			"title": "senna-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt911548d6d3a5750a/60ee11a09a3f4a5c9e68b2ae/senna-splash.jpg",
+			"encoding": "image/jpeg",
+			"width": 1900,
+			"height": 1121,
+			"x": 1106,
+			"y": 127,
+			"featured-champions": []
+		},
+		"faction": "runeterra",
+		"tag1": "Marksman",
+		"tag2": "Support"
+	},
+	{
+		"name": "Seraphine",
+		"image": {
+			"title": "seraphine-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blta924fdd38453d22b/60ee11a6b23973202c8a736a/seraphine-splash.jpg",
+			"encoding": "image/jpeg",
+			"width": 1920,
+			"height": 1080,
+			"x": 812,
+			"y": 202,
+			"featured-champions": []
+		},
+		"faction": "piltover",
+		"tag1": "Mage",
+		"tag2": "Support"
+	},
+	{
+		"name": "Sett",
+		"image": {
+			"title": "sett-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blta4f78a29b9ba4c0e/60ee11ab2bfb1144ace9a019/sett-splash.jpg",
+			"encoding": "image/jpeg",
+			"width": 1900,
+			"height": 1092,
+			"x": 927,
+			"y": 98,
+			"featured-champions": []
+		},
+		"faction": "ionia",
+		"tag1": "Fighter",
+		"tag2": "Tank"
+	},
+	{
+		"name": "Shaco",
+		"image": {
+			"title": "shaco-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt6f5beb33c10f0fc9/60ee11b2a718b62441b30a21/Shaco_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 997,
+			"y": 8,
+			"featured-champions": []
+		},
+		"faction": "runeterra",
+		"tag1": "Assassin",
+		"tag2": "null"
+	},
+	{
+		"name": "Shen",
+		"image": {
+			"title": "shen-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/bltbf54c151f1d2730d/60ee11dc496a232835c1ffef/Shen_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 1034,
+			"y": 0,
+			"featured-champions": []
+		},
+		"faction": "ionia",
+		"tag1": "Tank",
+		"tag2": "null"
+	},
+	{
+		"name": "Shyvana",
+		"image": {
+			"title": "shyvana-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt5b30a904d3564cd1/60ee120771e7852988a7bbe7/Shyvana_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 951,
+			"y": 0,
+			"featured-champions": []
+		},
+		"faction": "demacia",
+		"tag1": "Fighter",
+		"tag2": "Tank"
+	},
+	{
+		"name": "Singed",
+		"image": {
+			"title": "singed-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt84220fdc67ead8d8/60ee120e2202166087e382c8/Singed_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 945,
+			"y": 4,
+			"featured-champions": []
+		},
+		"faction": "zaun",
+		"tag1": "Tank",
+		"tag2": "Fighter"
+	},
+	{
+		"name": "Sion",
+		"image": {
+			"title": "sion-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/bltfadf063f94aef735/60ee1217da02804b3fb7dcc2/Sion_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 944,
+			"y": 4,
+			"featured-champions": []
+		},
+		"faction": "noxus",
+		"tag1": "Tank",
+		"tag2": "Fighter"
+	},
+	{
+		"name": "Sivir",
+		"image": {
+			"title": "sivir-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt37dc281ef11dea6b/64eeafb7f2495f124d460e6a/Sivir_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 740,
+			"y": 105,
+			"featured-champions": []
+		},
+		"faction": "shurima",
+		"tag1": "Marksman",
+		"tag2": "null"
+	},
+	{
+		"name": "Skarner",
+		"image": {
+			"title": "skarner-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt7f291e5a370b94f4/60ee1225feddb63580fcb6a7/Skarner_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 1004,
+			"y": 276,
+			"featured-champions": []
+		},
+		"faction": "shurima",
+		"tag1": "Fighter",
+		"tag2": "Tank"
+	},
+	{
+		"name": "Sona",
+		"image": {
+			"title": "sona-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/bltbf2307aee6365bcf/60ee1228b4019f23086a509c/Sona_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 931,
+			"y": 1,
+			"featured-champions": []
+		},
+		"faction": "demacia",
+		"tag1": "Support",
+		"tag2": "Mage"
+	},
+	{
+		"name": "Soraka",
+		"image": {
+			"title": "soraka-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt7fcc6ddb2f9f13ba/60ee122b66d52e63b8eb6be7/Soraka_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 688,
+			"y": 0,
+			"featured-champions": []
+		},
+		"faction": "mount-targon",
+		"tag1": "Support",
+		"tag2": "Mage"
+	},
+	{
+		"name": "Swain",
+		"image": {
+			"title": "swain-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt7a9366b61b34f8a7/60ee129d66d52e63b8eb6bf1/swain-splash.jpg",
+			"encoding": "image/jpeg",
+			"width": 1920,
+			"height": 1133,
+			"x": 1458,
+			"y": 0,
+			"featured-champions": []
+		},
+		"faction": "noxus",
+		"tag1": "Mage",
+		"tag2": "Fighter"
+	},
+	{
+		"name": "Sylas",
+		"image": {
+			"title": "sylas-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt37610e0af19b202c/60fb5338b409525ac94e5b0a/sylas-splash.jpg",
+			"encoding": "image/jpeg",
+			"width": 1920,
+			"height": 1190,
+			"x": 970,
+			"y": 121,
+			"featured-champions": []
+		},
+		"faction": "demacia",
+		"tag1": "Mage",
+		"tag2": "Assassin"
+	},
+	{
+		"name": "Syndra",
+		"image": {
+			"title": "syndra-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt025e70eaad333d81/60ee12a65eda9722617c57b2/Syndra_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 1022,
+			"y": 69,
+			"featured-champions": []
+		},
+		"faction": "ionia",
+		"tag1": "Mage",
+		"tag2": "null"
+	},
+	{
+		"name": "Tahm Kench",
+		"image": {
+			"title": "tahmkench-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/bltcb65957e0e85d55b/60ee12ac4253da270126dcde/TahmKench_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 1025,
+			"y": 338,
+			"featured-champions": []
+		},
+		"faction": "runeterra",
+		"tag1": "Support",
+		"tag2": "Tank"
+	},
+	{
+		"name": "Taliyah",
+		"image": {
+			"title": "taliyah-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/bltbfab44d1f475186f/60ee12b284a5742702dbc0ce/Taliyah_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 1063,
+			"y": 0,
+			"featured-champions": []
+		},
+		"faction": "shurima",
+		"tag1": "Mage",
+		"tag2": "Support"
+	},
+	{
+		"name": "Talon",
+		"image": {
+			"title": "talon-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt7df9d71e87d2ab9a/60ee12bd730ed71c59413b09/Talon_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 893,
+			"y": 121,
+			"featured-champions": []
+		},
+		"faction": "noxus",
+		"tag1": "Assassin",
+		"tag2": "null"
+	},
+	{
+		"name": "Taric",
+		"image": {
+			"title": "taric-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/bltd6031c92be7eafe7/60ee12d872ec164ac4beddd4/Taric_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 1061,
+			"y": 41,
+			"featured-champions": []
+		},
+		"faction": "mount-targon",
+		"tag1": "Support",
+		"tag2": "Fighter"
+	},
+	{
+		"name": "Teemo",
+		"image": {
+			"title": "teemo-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt8ed0ddc56697f275/60ee12deaa9be3239e98d9a2/Teemo_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 951,
+			"y": 93,
+			"featured-champions": []
+		},
+		"faction": "bandle-city",
+		"tag1": "Marksman",
+		"tag2": "Assassin"
+	},
+	{
+		"name": "Thresh",
+		"image": {
+			"title": "thresh-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt9fd7de40b070c6d4/60ee12e97a84715a12c2a301/Thresh_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 847,
+			"y": 3,
+			"featured-champions": []
+		},
+		"faction": "shadow-isles",
+		"tag1": "Support",
+		"tag2": "Fighter"
+	},
+	{
+		"name": "Tristana",
+		"image": {
+			"title": "tristana-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blte1289411582cdefa/60ee13023a7d261c53fb5275/Tristana_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 922,
+			"y": 26,
+			"featured-champions": []
+		},
+		"faction": "bandle-city",
+		"tag1": "Marksman",
+		"tag2": "Assassin"
+	},
+	{
+		"name": "Trundle",
+		"image": {
+			"title": "trundle-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt0ae436a8ff716d99/60ee130b496a232835c1fffb/Trundle_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 788,
+			"y": 48,
+			"featured-champions": []
+		},
+		"faction": "freljord",
+		"tag1": "Fighter",
+		"tag2": "Tank"
+	},
+	{
+		"name": "Tryndamere",
+		"image": {
+			"title": "tryndamere-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/bltd450a0f61fb2974c/60ee130f496a232835c1ffff/Tryndamere_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 937,
+			"y": 3,
+			"featured-champions": []
+		},
+		"faction": "freljord",
+		"tag1": "Fighter",
+		"tag2": "Assassin"
+	},
+	{
+		"name": "Twisted Fate",
+		"image": {
+			"title": "twistedfate-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt648f38bcfb9410c1/60ee13167897c2473be7c2c9/TwistedFate_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 1006,
+			"y": 37,
+			"featured-champions": []
+		},
+		"faction": "bilgewater",
+		"tag1": "Mage",
+		"tag2": "null"
+	},
+	{
+		"name": "Twitch",
+		"image": {
+			"title": "twitch-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt6d95f66073acbe03/60ee1319730ed71c59413b0d/Twitch_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 760,
+			"y": 197,
+			"featured-champions": []
+		},
+		"faction": "zaun",
+		"tag1": "Marksman",
+		"tag2": "Assassin"
+	},
+	{
+		"name": "Udyr",
+		"image": {
+			"title": "Udyr-Final_opt.jpg",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt06831c27e46f9a6c/62f28c9b7ef11d3a32a96e27/Udyr-Final_opt.jpg",
+			"encoding": "image/jpeg",
+			"width": 1974,
+			"height": 1087,
+			"x": 1050,
+			"y": 150,
+			"featured-champions": []
+		},
+		"faction": "freljord",
+		"tag1": "Fighter",
+		"tag2": "Tank"
+	},
+	{
+		"name": "Urgot",
+		"image": {
+			"title": "urgot-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/bltf0cbbef2f074c8cb/60ee13263a7d261c53fb5279/urgot-splash-updated.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 686,
+			"y": 40,
+			"featured-champions": []
+		},
+		"faction": "zaun",
+		"tag1": "Fighter",
+		"tag2": "Tank"
+	},
+	{
+		"name": "Varus",
+		"image": {
+			"title": "varus-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blta3a77808520e8966/60ee132c8258b32d83974e22/varus-splash.jpg",
+			"encoding": "image/jpeg",
+			"width": 1920,
+			"height": 1133,
+			"x": 1034,
+			"y": 0,
+			"featured-champions": []
+		},
+		"faction": "ionia",
+		"tag1": "Marksman",
+		"tag2": "Mage"
+	},
+	{
+		"name": "Vayne",
+		"image": {
+			"title": "vayne-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/bltb55f82eda095f4e8/60ee13795397524ead38918b/Vayne_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 1122,
+			"y": 76,
+			"featured-champions": []
+		},
+		"faction": "demacia",
+		"tag1": "Marksman",
+		"tag2": "Assassin"
+	},
+	{
+		"name": "Veigar",
+		"image": {
+			"title": "veigar-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt2660186c36e21d58/60ee137d09c9f73c0e83f8a0/Veigar_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 865,
+			"y": 71,
+			"featured-champions": []
+		},
+		"faction": "bandle-city",
+		"tag1": "Mage",
+		"tag2": "null"
+	},
+	{
+		"name": "Vel'Koz",
+		"image": {
+			"title": "velkoz-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt3c72620cdc5d8b98/60ee13831d961d58d812dc66/Velkoz_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 759,
+			"y": 227,
+			"featured-champions": []
+		},
+		"faction": "void",
+		"tag1": "Mage",
+		"tag2": "null"
+	},
+	{
+		"name": "Vex",
+		"image": {
+			"title": "vex-splash.jpg",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt8f02a4d9f9fa875d/6140106a38fe802535067228/vex-splash.jpg",
+			"encoding": "image/jpeg",
+			"width": 1920,
+			"height": 1064,
+			"x": 1250,
+			"y": 150,
+			"featured-champions": []
+		},
+		"faction": "shadow-isles",
+		"tag1": "Mage",
+		"tag2": "null"
+	},
+	{
+		"name": "Vi",
+		"image": {
+			"title": "vi-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt386aa1a09687ad91/60ee138c43739d6620a57392/Vi_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 926,
+			"y": 135,
+			"featured-champions": []
+		},
+		"faction": "piltover",
+		"tag1": "Fighter",
+		"tag2": "Assassin"
+	},
+	{
+		"name": "Viego",
+		"image": {
+			"title": "viego-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt4a1eca6952a9cb94/60ee139130f3493a9f2fa48a/viego-splash.jpg",
+			"encoding": "image/jpeg",
+			"width": 1900,
+			"height": 1127,
+			"x": 1419,
+			"y": 208,
+			"featured-champions": []
+		},
+		"faction": "shadow-isles",
+		"tag1": "Assassin",
+		"tag2": "Fighter"
+	},
+	{
+		"name": "Viktor",
+		"image": {
+			"title": "viktor-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt68b21a4007b1ffdf/60ee13932202166087e382d2/Viktor_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 908,
+			"y": 23,
+			"featured-champions": []
+		},
+		"faction": "zaun",
+		"tag1": "Mage",
+		"tag2": "null"
+	},
+	{
+		"name": "Vladimir",
+		"image": {
+			"title": "vladimir-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/bltffbd1a073e248498/60ee1398a9c1f936b973285b/Vladimir_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 1023,
+			"y": 21,
+			"featured-champions": []
+		},
+		"faction": "noxus",
+		"tag1": "Mage",
+		"tag2": "null"
+	},
+	{
+		"name": "Volibear",
+		"image": {
+			"title": "volibear-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/bltbf16308b8376a69b/60ee13a60311fd25c98c2c4d/volibear-splash.jpg",
+			"encoding": "image/jpeg",
+			"width": 1922,
+			"height": 1131,
+			"x": 1113,
+			"y": 50,
+			"featured-champions": []
+		},
+		"faction": "freljord",
+		"tag1": "Fighter",
+		"tag2": "Tank"
+	},
+	{
+		"name": "Warwick",
+		"image": {
+			"title": "warwick-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/bltfdc7d086a94d05ce/60ee13af43739d6620a57396/warwick-splash-updated.jpg",
+			"encoding": "image/jpeg",
+			"width": 1280,
+			"height": 783,
+			"x": 885,
+			"y": 476,
+			"featured-champions": []
+		},
+		"faction": "zaun",
+		"tag1": "Fighter",
+		"tag2": "Tank"
+	},
+	{
+		"name": "Wukong",
+		"image": {
+			"title": "monkeyking-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/bltac6dc4d0af9fd20e/60ee0f77c019ad2aaa39a506/MonkeyKing_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 852,
+			"y": 132,
+			"featured-champions": []
+		},
+		"faction": "ionia",
+		"tag1": "Fighter",
+		"tag2": "Tank"
+	},
+	{
+		"name": "Xayah",
+		"image": {
+			"title": "xayah-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt64407be80c57da40/60fb534c94c59f4871e8cb03/xayah-splash.jpg",
+			"encoding": "image/jpeg",
+			"width": 2792,
+			"height": 1080,
+			"x": 1857,
+			"y": 256,
+			"featured-champions": []
+		},
+		"faction": "ionia",
+		"tag1": "Marksman",
+		"tag2": "null"
+	},
+	{
+		"name": "Xerath",
+		"image": {
+			"title": "xerath-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt1bc67812e9b9e156/60ee13c77b4a95436e1ae0a8/Xerath_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 701,
+			"y": 23,
+			"featured-champions": []
+		},
+		"faction": "shurima",
+		"tag1": "Mage",
+		"tag2": "null"
+	},
+	{
+		"name": "Xin Zhao",
+		"image": {
+			"title": "xinzhao-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt21fb20a31ce61a81/60ee13c900859160920d444a/xinzhao-splash-updated.jpg",
+			"encoding": "image/jpeg",
+			"width": 1920,
+			"height": 1133,
+			"x": 1024,
+			"y": 309,
+			"featured-champions": []
+		},
+		"faction": "demacia",
+		"tag1": "Fighter",
+		"tag2": "Assassin"
+	},
+	{
+		"name": "Yasuo",
+		"image": {
+			"title": "yasuo-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt41c476486b063ef8/60ee13df31f9ee2ab08a4dfe/Yasuo_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 1069,
+			"y": 225,
+			"featured-champions": []
+		},
+		"faction": "ionia",
+		"tag1": "Fighter",
+		"tag2": "Assassin"
+	},
+	{
+		"name": "Yone",
+		"image": {
+			"title": "yone-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt3cefcd6544df9e5d/60ee13e4810a0e49eabfd0be/yone-splash.jpg",
+			"encoding": "image/jpeg",
+			"width": 1920,
+			"height": 1100,
+			"x": 1134,
+			"y": 102,
+			"featured-champions": []
+		},
+		"faction": "ionia",
+		"tag1": "Assassin",
+		"tag2": "Fighter"
+	},
+	{
+		"name": "Yorick",
+		"image": {
+			"title": "yorick-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt54ec063fda332295/60ee13e91d961d58d812dc6a/Yorick_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 968,
+			"y": 11,
+			"featured-champions": []
+		},
+		"faction": "shadow-isles",
+		"tag1": "Fighter",
+		"tag2": "Tank"
+	},
+	{
+		"name": "Yuumi",
+		"image": {
+			"title": "yuumi-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt95cdb2d55e0d22f4/60ee13f0ba1c655fbc2eef7f/Yuumi_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1920,
+			"height": 1204,
+			"x": 863,
+			"y": 75,
+			"featured-champions": []
+		},
+		"faction": "bandle-city",
+		"tag1": "Support",
+		"tag2": "Mage"
+	},
+	{
+		"name": "Zac",
+		"image": {
+			"title": "zac-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt88c6a720fb19e73e/60ee13fb85b0422843961421/Zac_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 924,
+			"y": 432,
+			"featured-champions": []
+		},
+		"faction": "zaun",
+		"tag1": "Tank",
+		"tag2": "Fighter"
+	},
+	{
+		"name": "Zed",
+		"image": {
+			"title": "zed-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt78255e660a53aa1d/60ee143a71e7852988a7bbf7/Zed_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 925,
+			"y": 22,
+			"featured-champions": []
+		},
+		"faction": "ionia",
+		"tag1": "Assassin",
+		"tag2": "null"
+	},
+	{
+		"name": "Zeri",
+		"image": {
+			"title": "zeri-splashv2.jpg",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt8153414671d1773e/61d8f87251bc1739fe799310/zeri-splashv2.jpg",
+			"encoding": "image/jpeg",
+			"width": 1920,
+			"height": 1080,
+			"x": 1100,
+			"y": 300,
+			"featured-champions": []
+		},
+		"faction": "zaun",
+		"tag1": "Marksman",
+		"tag2": "null"
+	},
+	{
+		"name": "Ziggs",
+		"image": {
+			"title": "ziggs-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt11f749e9465df337/60ee1441b3f12e2b0efe994a/Ziggs_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 1018,
+			"y": 199,
+			"featured-champions": []
+		},
+		"faction": "zaun",
+		"tag1": "Mage",
+		"tag2": "null"
+	},
+	{
+		"name": "Zilean",
+		"image": {
+			"title": "zilean-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt5b40ae5b314cde59/60ee1443c941f329772e4e2f/Zilean_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 746,
+			"y": 7,
+			"featured-champions": []
+		},
+		"faction": "runeterra",
+		"tag1": "Support",
+		"tag2": "Mage"
+	},
+	{
+		"name": "Zoe",
+		"image": {
+			"title": "zoe-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blta5516014683545a0/60ee1444a471a34acb2c2016/zoe-splash.jpg",
+			"encoding": "image/jpeg",
+			"width": 1920,
+			"height": 1135,
+			"x": 1055,
+			"y": 263,
+			"featured-champions": []
+		},
+		"faction": "mount-targon",
+		"tag1": "Mage",
+		"tag2": "Support"
+	},
+	{
+		"name": "Zyra",
+		"image": {
+			"title": "zyra-splash",
+			"subtitle": "",
+			"description": "",
+			"uri": "https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt8f56250bca8202a9/60ee1450cdb93c284ee3e9f0/Zyra_0.jpg",
+			"encoding": "image/jpeg",
+			"width": 1215,
+			"height": 717,
+			"x": 1070,
+			"y": 38,
+			"featured-champions": []
+		},
+		"faction": "ixtal",
+		"tag1": "Mage",
+		"tag2": "Support"
+	}
+]

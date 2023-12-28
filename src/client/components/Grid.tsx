@@ -2,7 +2,7 @@ import Square from "./Square";
 import { useGridStore } from "../store/grid_store";
 
 type Props = {
-	answers: string[],
+	answers: string[][],
 };
 
 const Grid = ({ answers }: Props) => {

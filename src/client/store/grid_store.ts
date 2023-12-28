@@ -1,5 +1,5 @@
 import { create } from "zustand";
-
+import {data} from "../../server/demoData.json"
 export interface GridState {
   grid: Array<{
     name?:string
@@ -9,7 +9,11 @@ export interface GridState {
 
 export const useGridStore = create<GridState>()((set) => ({
 	grid: Array(9).fill({}),
-	makeGuess: (guess:string, ind:number) => set((state) => ({ grid: state.grid.toSpliced(ind, 1, {name:guess}) })),
+	makeGuess: (guess:string, ind:number) => {
+    if( data[ind].includes(guess)){
+      set((state) => ({ grid: state.grid.toSpliced(ind, 1, {name:guess}) }))}
+    }
+    ,
 }));
 /* 
 type State = {
