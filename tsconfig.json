@@ -10,6 +10,7 @@
 		"paths": {
 			"@/*": ["./src/*"]
 		},
+		"types": ["jest", "@testing-library/jest-dom"],
 		"esModuleInterop": true,
 		"resolveJsonModule": true,
 		"isolatedModules": true,
