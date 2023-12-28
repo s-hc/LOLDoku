@@ -1,3 +1,4 @@
+import React from "react";
 import { Icons } from "@/client/assets/icons";
 import { Button, buttonVariants } from "@/client/components/ui/button";
 import { useNavigate } from "react-router-dom";
@@ -15,7 +16,7 @@ import {
  * Currently, only Google authentication is functional
  * @returns {JSX.Element} The rendered authentication options component
  */
-export default function AuthenticationPage() {
+export default function Authentication() {
 	const navigate = useNavigate();
 
 	const handleGoogleAuth = () => {

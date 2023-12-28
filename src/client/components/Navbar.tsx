@@ -10,7 +10,7 @@ import {
 } from "./ui/dialog";
 import { ModeToggle } from "./ModeToggle";
 import MaxWidthWrapper from "./MaxWidthWrapper";
-import AuthenticationPage from "./Auth";
+import Authentication from "./Authentication";
 import { Icons } from "../assets/icons";
 import { useEffect, useState } from "react";
 import { fetchUserData, logOut } from "../lib/utils";
@@ -168,7 +168,7 @@ const Navbar = () => {
 												</DropdownMenuContent>
 											</DropdownMenu>
 										) : (
-											<AuthenticationPage />
+											<Authentication />
 										)}
 									</div>
 								</div>
