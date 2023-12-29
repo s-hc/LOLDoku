@@ -23,14 +23,16 @@ model Champion {
   faction  String
   resource String
   tag1Id   Int
-  tag1     Tag    @relation("Tag1ToChampion", fields: [tag1Id], references: [id])
   tag2Id   Int
-  tag2     Tag    @relation("Tag2ToChampion", fields: [tag2Id], references: [id])
+
+  tag1 Tag @relation("Tag1ToChampion", fields: [tag1Id], references: [id])
+  tag2 Tag @relation("Tag2ToChampion", fields: [tag2Id], references: [id])
 }
 
 model Tag {
-  id         Int        @id @default(autoincrement())
-  tag        String
+  id  Int    @id @default(autoincrement())
+  tag String
+
   champions1 Champion[] @relation("Tag1ToChampion")
   champions2 Champion[] @relation("Tag2ToChampion")
 }
