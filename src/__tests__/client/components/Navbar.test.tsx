@@ -1,8 +1,9 @@
+import { render, screen, waitFor, fireEvent, act } from "@testing-library/react";
 import Navbar from "@/client/components/Navbar";
 import * as utils from "@/client/lib/utils";
 import { MemoryRouter } from "react-router-dom";
-import { render, screen, waitFor, fireEvent } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
+
 
 // Mock the utility functions
 jest.mock("@/client/lib/utils", () => ({
@@ -10,6 +11,7 @@ jest.mock("@/client/lib/utils", () => ({
   fetchUserData: jest.fn(),
   logOut: jest.fn(),
 }));
+
 
 // Cast the mocked functions to jest.Mock
 const mockedFetchUserData = utils.fetchUserData as jest.Mock;
@@ -40,6 +42,8 @@ describe("Navbar Component", () => {
     window.location = originalLocation;
   });
 
+
+
   it("should render correctly when user is not logged in", () => {
     renderNavbar();
     expect(screen.getByText("Rules")).toBeInTheDocument();
@@ -63,27 +67,30 @@ describe("Navbar Component", () => {
     fireEvent.click(screen.getByText("Log Out"));
 
     expect(mockedLogOut).toHaveBeenCalledTimes(1);
-  })
+  });
+
+  it("should show mode options when user clicks on the mode button", async () => {
+    renderNavbar();
+ 
+    await act(async () => {
+      userEvent.click(screen.getByText("Toggle theme"));
+    });
+
+    await waitFor(async () => {
+      expect(screen.getByText("Light")).toBeInTheDocument();
+      expect(screen.getByText("Dark")).toBeInTheDocument();
+      expect(screen.getByText("System")).toBeInTheDocument();
+    });
+  });
+  
+  it("should render Rules modal when user clicks on the Rules button", async () => {
+    renderNavbar();
+    await act(async () => {
+      userEvent.click(screen.getByText("Rules"));
+    });
+    await waitFor(async () => {
+      expect(screen.getByText("Rules")).toBeInTheDocument();
+    });
+  });
+  
 });
-
-
-/**
- * Notes: fireEvent.click() vs userEvent.click()
- * 
- * fireEvent
- * - lower-level API provided by RTL that triggers specified event on DOM element
- * - limitation: it may not always simulate user's interaction with UI accurately
- *  - e.g. when using fireEvent.click, only triggers click event and does not emulate complete sequence of events a user would trigger when clicking on an element
- * 
- * userEvent
- * - higher-level API provided by @testing-library/user-event that simulates user's interaction with UI
- * - more accurate simulation of user's interaction with UI
- * - generally preferred for simulating more complex interaction snad for tests that emulate user's interaction with UI more closely
- * 
- * userEvent more preferrable oeverall, but fireEvent is still more useful in some cases:
- *  - Testing low level events
- *  - Simple, allows triggering event without a lot of additional behaviors
- *  - Performant
- *  - Fallback for when userEvent doesn't work
- * 
- */

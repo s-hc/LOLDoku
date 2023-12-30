@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "tsc && concurrently \"vite --host\" \"nodemon dist/server/server.js\"",
     "start": "tsc && nodemon dist/server/server.js",
-    "test": "jest",
+    "test": "jest --silent",
     "build": "vite build",
     "build:watch": "tsc -w",
     "preview": "vite preview"
@@ -58,6 +58,7 @@
     "autoprefixer": "^10.4.16",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
+    "jest-fetch-mock": "^3.0.3",
     "nodemon": "^3.0.2",
     "postcss": "^8.4.32",
     "tailwindcss": "^3.4.0",
