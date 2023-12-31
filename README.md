@@ -94,13 +94,13 @@ LOLDoku is an open source spin on the classic Immaculate Grid using champions fr
 2. Clone the repository to your local environment.
 
 ```bash
-git clone https://github.com/<your-github-username>/loldoku.git
+git clone https://github.com/<your-github-username>/LOLDoku.git
 ```
 
 4. Navigate to the root project directory and install dependencies
 
 ```bash
-cd loldoku
+cd LOLDoku
 npm install
 ```
 
