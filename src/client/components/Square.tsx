@@ -16,28 +16,54 @@ import {
 	CommandItem,
 	CommandList,
 } from "@/client/components/ui/command";
-import champs from "../../server/demoChampList.json";
+import raw from "@/server/demoRaw.json";
 import { useGuessesStore } from "../store/guesses_store";
-import { useGridStore } from "../store/grid_store";
 
 type Props = {
 	champion: string | undefined,
-	answer: string,
+	champNum: number | undefined,
+	answer: string[],
 	squareNum: number,
+	makeGuess: (guess: string, num: number, ind: number) => void,
 };
 
-const Square = ({ champion, answer, squareNum }: Props) => {
+const Square = ({
+	champion,
+	answer,
+	champNum,
+	squareNum,
+	makeGuess,
+}: Props) => {
 	const decrease = useGuessesStore((state) => state.decrease);
-	const makeGuess = useGridStore((state) => state.makeGuess);
+	const champArr = raw;
+	const haveGuesses = useGuessesStore((state) => state.guesses);
+	const selectedChamp =
+		champNum != undefined ? champArr[champNum].image : undefined;
+	const inlineStyle =
+		champNum != undefined
+			? {
+					backgroundImage: `url(${selectedChamp.uri})`,
+					backgroundPosition: `${
+						(100 * selectedChamp.x) / selectedChamp.width
+					}% ${(100 * selectedChamp.y) / selectedChamp.height}%`,
+					backgroundSize: "cover",
+			  }
+			: {};
 	return (
+		// champion != undefined ? //code here : //code here
 		// <div className="border-solid border-2">{champion ?? ""}</div>
+		// if champion exists, <Button>champion</
+		// if not, dialog+trigger
 
 		<Dialog>
 			<DialogTrigger asChild>
 				<Button
+					disabled={champion != undefined || haveGuesses <= 0}
 					variant="outline"
 					size={"lg"}
-					className="size-full"
+					className="size-full bg-cover"
+					// style={champion!=undefined ? inlineStyle:{}}
+					style={inlineStyle}
 					// className="w-[calc(952px/5)] h-[calc(952px/5)] "
 				>
 					{champion ?? ""}
@@ -46,23 +72,23 @@ const Square = ({ champion, answer, squareNum }: Props) => {
 			<DialogContent>
 				<DialogHeader>
 					<DialogTitle>Make Your Guess</DialogTitle>
-					<DialogDescription>{`you should guess ${answer}`}</DialogDescription>
+					<DialogDescription>{`you should guess ${answer[0]}`}</DialogDescription>
 				</DialogHeader>
 				<Command>
 					<CommandInput placeholder="Type a command or search..." />
 					<CommandList>
 						<CommandEmpty>No results found.</CommandEmpty>
 						<CommandGroup>
-							{champs.champions.map((ele, ind) => (
+							{champArr.map((ele, ind) => (
 								<CommandItem key={`champNo${ind}`}>
 									<DialogClose
 										className="size-full"
 										onClick={() => {
-											makeGuess(ele, squareNum);
+											makeGuess(ele.name, ind, squareNum);
 											decrease();
 										}}
 									>
-										{ele}
+										{ele.name}
 									</DialogClose>
 								</CommandItem>
 							))}
