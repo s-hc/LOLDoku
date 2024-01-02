@@ -6,6 +6,7 @@ import { Button } from "../components/ui/button";
 
 function HomePage() {
 	const guesses = useGuessesStore((state) => state.guesses);
+	const giveUp = useGuessesStore((state) => state.giveup);
 	const cols = json.columns;
 	const rows = json.rows;
 
@@ -14,7 +15,7 @@ function HomePage() {
 	return (
 		<MaxWidthWrapper>
 			<h1>Home Page</h1>
-			<div className="grid grid-cols-5 grid-rows-5 grid-flow-row mx-auto aspect-square">
+			<div className="grid grid-cols-5 grid-rows-5 grid-flow-row mx-auto aspect-square h-[calc(100vh-16px)]">
 				{rows.map((ele, ind) => (
 					<Button
 						disabled
@@ -37,7 +38,14 @@ function HomePage() {
 				))}
 
 				<Grid answers={json.data} />
-				<div className="row-start-3 col-start-5">{`Guesses: ${guesses}`}</div>
+				<div className="row-start-3 col-start-5 my-auto flex flex-col px-4 h-full justify-center gap-2">
+					<Button disabled variant="secondary">
+						{`Guesses: ${guesses}`}
+					</Button>
+					<Button variant="destructive" onClick={() => giveUp()}>
+						Give up
+					</Button>
+				</div>
 			</div>
 		</MaxWidthWrapper>
 	);
