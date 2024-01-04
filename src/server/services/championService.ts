@@ -72,7 +72,11 @@ export const fetchChampionData = async (): Promise<any> => {
 			if (championData) {
 				return {
 					name: champ.name,
-					image: champ.image,
+					releaseDate: champ.releaseDate,
+					champDescription: championData.blurb,
+					imageUri: champ.image.uri,
+					xOffset: (100 * champ.image.x) / champ.image.width,
+					yOffset: (100 * champ.image.y) / champ.image.height,
 					faction:
 						champ["associated-faction-slug"] === "unaffiliated"
 							? "runeterra"
