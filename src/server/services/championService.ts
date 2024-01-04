@@ -7,6 +7,18 @@
 import axios from "axios";
 import { db } from "../utils/db.server.js";
 
+interface ChampRes {
+	name: string;
+	releaseDate: string;
+	champDescription: string;
+	imageUri: string;
+	xOffset: number;
+	yOffset: number;
+	faction: string;
+	tags: string[];
+	resource: string;
+}
+
 /**
  * Dictionary for champion name exceptions.
  */
@@ -115,19 +127,21 @@ export const isTheChampionInTheDatabase = async (
 	return !!result;
 };
 
-/**
- * converts tags to tag1 and tag2
- * This should only run if a champion still has the "tags" property instead of tag1, tag2.
- * @param champion 
- * @returns modified champion object
- */
-export const modifyTagsToTag1Tag2 = (champion:any)=>{
-	console.log(`<--Modifying ${champion.name} tags-->`)
-	champion.tag1 = champion.tags[0];
-	champion.tags[1] ? champion.tag2 = champion.tags[1] : champion.tag2 = "null";
-	delete champion.tags;
-	return champion;
-}
+// /**
+//  * converts tags to tag1 and tag2
+//  * This should only run if a champion still has the "tags" property instead of tag1, tag2.
+//  * @param champion
+//  * @returns modified champion object
+//  */
+// export const modifyTagsToTag1Tag2 = (champion: any) => {
+// 	console.log(`<--Modifying ${champion.name} tags-->`);
+// 	champion.tag1 = champion.tags[0];
+// 	champion.tags[1]
+// 		? (champion.tag2 = champion.tags[1])
+// 		: (champion.tag2 = "null");
+// 	delete champion.tags;
+// 	return champion;
+// };
 
 /**
  * This function only adds new champions to the database
@@ -135,28 +149,51 @@ export const modifyTagsToTag1Tag2 = (champion:any)=>{
  * @param next Express next function
  */
 export const addNewChampionToDatabase = async (
-	championToBeAddedToDatabase: any,
+	championToBeAddedToDatabase: ChampRes
 ) => {
-	const{name, image, faction, resource, tag1, tag2} = championToBeAddedToDatabase;
-	await db.champion.create({
-		data: {
-			name,
-			image,
-			faction,
-			resource,
-			tag1: {
-				create: {tag: tag1}
+	const { name, imageUri, faction, resource, xOffset, yOffset, tags } =
+		championToBeAddedToDatabase;
+	let id: number;
+	await db.champion
+		.create({
+			data: {
+				name,
+				uri: imageUri,
+				faction,
+				resource,
+				xOffset,
+				yOffset,
 			},
-			tag2: {
-				create: {tag: tag2}
-			}
-		},
-	})
-	.then(()=>{
-		console.log(`<--${championToBeAddedToDatabase.name} successfully added into database.-->`)
-	})
-	.catch((error:any)=>{
-		console.log(`<--Error adding ${championToBeAddedToDatabase.name} to database!-->`)
-		console.error(error)
-	})
+			select: {
+				id: true,
+			},
+		})
+		.then((res) => {
+			id = res.id;
+			console.log(
+				`<--${championToBeAddedToDatabase.name} successfully added into database.-->`
+			);
+		})
+		.catch((error: any) => {
+			console.log(
+				`<--Error adding ${championToBeAddedToDatabase.name} to database!-->`
+			);
+			console.error(error);
+		});
+
+	await db.role
+		.createMany({
+			data: tags.map((ele) => ({ tag: ele, champ: id })),
+		})
+		.then(() => {
+			console.log(
+				`<--tags for ${championToBeAddedToDatabase.name} successfully added into database.-->`
+			);
+		})
+		.catch((error: any) => {
+			console.log(
+				`<--Error adding ${championToBeAddedToDatabase.name} tags to database!-->`
+			);
+			console.error(error);
+		});
 };

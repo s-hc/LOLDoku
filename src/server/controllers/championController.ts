@@ -3,7 +3,7 @@ import {
 	addNewChampionToDatabase,
 	fetchChampionData,
 	isTheChampionInTheDatabase,
-	modifyTagsToTag1Tag2,
+	// modifyTagsToTag1Tag2,
 } from "../services/championService.js";
 
 /**
@@ -35,22 +35,28 @@ export const getChampions = async (
 
 // data is literally in your res.locals.champions
 
-export const cacheChampions = async (_req: Request, res: Response, next: NextFunction) => {
+export const cacheChampions = async (
+	_req: Request,
+	res: Response,
+	next: NextFunction
+) => {
 	console.log("---In cacheChampions in championController.ts---");
 	for (const champion of res.locals.champions) {
 		//fresh pull from api
-		modifyTagsToTag1Tag2(champion);
+		// modifyTagsToTag1Tag2(champion);
 		//now it has 2 tags instead of 1 array
-		const theChampionIsInTheDatabase = await isTheChampionInTheDatabase(champion.name)
-
-		if(!theChampionIsInTheDatabase) {
+		const theChampionIsInTheDatabase = await isTheChampionInTheDatabase(
+			champion.name
+		);
+		
+		if (!theChampionIsInTheDatabase) {
 			//champ is not in database
 			await addNewChampionToDatabase(champion);
 			//champ and associated tags are in database
 		}
 	}
 	next();
-}
+};
 
 /**
  * Mock Data from getChampions
