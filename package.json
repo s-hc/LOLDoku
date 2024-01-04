@@ -9,13 +9,16 @@
     "test": "jest --silent",
     "build": "vite build",
     "build:watch": "tsc -w",
-    "preview": "vite preview"
+    "preview": "vite preview",
+
+    "migrate": "npx run prisma migrate dev"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@radix-ui/react-dialog": "^1.0.5",
+    "@prisma/client": "^5.7.1",
     "@radix-ui/react-dropdown-menu": "^2.0.6",
     "@radix-ui/react-label": "^2.0.2",
     "@radix-ui/react-slot": "^1.0.2",
@@ -61,6 +64,7 @@
     "jest-fetch-mock": "^3.0.3",
     "nodemon": "^3.0.2",
     "postcss": "^8.4.32",
+    "prisma": "^5.7.1",
     "tailwindcss": "^3.4.0",
     "ts-node": "^10.9.2",
     "vite": "^5.0.10"

@@ -1,0 +1,38 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider          = "postgresql"
+  url               = env("DATABASE_URL")
+  shadowDatabaseUrl = env("SHADOW_DATABASE_URL")
+}
+
+model User {
+  id       Int    @id @unique @default(autoincrement())
+  username String @unique
+}
+
+model Champion {
+  id       Int    @id @unique @default(autoincrement())
+  name     String
+  image    Json
+  faction  String
+  resource String
+  tag1Id   Int
+  tag2Id   Int
+
+  tag1 Tag @relation("Tag1ToChampion", fields: [tag1Id], references: [id])
+  tag2 Tag @relation("Tag2ToChampion", fields: [tag2Id], references: [id])
+}
+
+model Tag {
+  id  Int    @id @default(autoincrement())
+  tag String
+
+  champions1 Champion[] @relation("Tag1ToChampion")
+  champions2 Champion[] @relation("Tag2ToChampion")
+}
