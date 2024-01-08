@@ -14,9 +14,9 @@ import {
  * Currently, only Google authentication is functional
  * @returns {JSX.Element} The rendered authentication options component
  */
-export default function Authentication() {
+export default function Authentication(): JSX.Element {
 	const handleGoogleAuth = () => {
-		const backendUrl = `${import.meta.env.VITE_BACKEND_URL}/auth/google`;
+		const backendUrl = `${global.import.meta.env.VITE_BACKEND_URL}/auth/google`;
 		console.log("this is the backend url", backendUrl);
 		window.location.href = backendUrl;
 	};
