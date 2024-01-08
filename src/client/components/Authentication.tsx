@@ -16,7 +16,8 @@ import {
  */
 export default function Authentication() {
 	const handleGoogleAuth = () => {
-		window.location.href = "http://localhost:3000/auth/google";
+		const backendUrl = `${process.env.REACT_APP_BACKEND_URL}/auth/google`;
+		window.location.href = backendUrl;
 	};
 
 	/**

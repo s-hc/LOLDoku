@@ -85,6 +85,6 @@ export const logout = (req, res) => {
 			console.log("Error in logout: ", err);
 			res.status(500).send("Error in logout");
 		}
-		res.redirect("/");
+		res.redirect(process.env.FRONTEND_URL);
 	});
 };
