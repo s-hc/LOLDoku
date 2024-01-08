@@ -16,7 +16,9 @@ import {
  */
 export default function Authentication() {
 	const handleGoogleAuth = () => {
-		window.location.href = "http://localhost:3000/auth/google";
+		const backendUrl = `${import.meta.env.VITE_BACKEND_URL}/auth/google`;
+		console.log("this is the backend url", backendUrl);
+		window.location.href = backendUrl;
 	};
 
 	/**
