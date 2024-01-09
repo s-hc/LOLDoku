@@ -47,3 +47,10 @@ describe("logOut function", () => {
 		expect(response).toBeNull();
 	});
 });
+
+// describe ("getEnv function", ()=> {
+
+// 	it("should return local environment variables", () => {
+		
+// 	})
+// });

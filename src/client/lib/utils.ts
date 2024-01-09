@@ -55,3 +55,22 @@ export async function logOut() {
 		return null;
 	}
 }
+/**
+ * Retrieves the value of a specific environment variable.
+ *
+ * This function uses import.meta.env to access environment variables.
+ *
+ * @param {string} key - Name of the environment variable to retrieve.
+ * @returns {string | undefined}
+ */
+export function getEnv (key:string): string | undefined {
+	// alert("This is the import.meta object")
+	if (typeof process !== 'undefined') {
+		return global.import.meta.env[key]
+	// } else if (typeof import.meta !== 'undefined') {
+	// 	return import.meta.env[key];
+	// } else {
+	// 	console.warn('Unknown Environment');
+	// 	return undefined
+	}
+};

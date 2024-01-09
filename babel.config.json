@@ -4,7 +4,9 @@
 		"@babel/preset-react",
 		"@babel/preset-typescript"
 	],
-	"plugins": [
-		"transform-import-meta"
-	]
+	"env": {
+		"test": {
+			"plugins": ["babel-plugin-transform-vite-meta-env"]
+		}
+	}
 }
