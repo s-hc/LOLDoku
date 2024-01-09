@@ -3,7 +3,8 @@ import {
 	addNewChampionToDatabase,
 	fetchChampionData,
 	isTheChampionInTheDatabase,
-	// modifyTagsToTag1Tag2,
+	fetchColsandRows,
+	validateGrid,
 } from "../services/championService.js";
 
 /**
@@ -41,22 +42,93 @@ export const cacheChampions = async (
 	next: NextFunction
 ) => {
 	console.log("---In cacheChampions in championController.ts---");
+
+	console.log("---Building missing champ array---");
+	const champCheck = [];
 	for (const champion of res.locals.champions) {
-		//fresh pull from api
-		// modifyTagsToTag1Tag2(champion);
-		//now it has 2 tags instead of 1 array
-		const theChampionIsInTheDatabase = await isTheChampionInTheDatabase(
-			champion.name
-		);
-		
-		if (!theChampionIsInTheDatabase) {
-			//champ is not in database
-			await addNewChampionToDatabase(champion);
-			//champ and associated tags are in database
+		champCheck.push(isTheChampionInTheDatabase(champion.name));
+	}
+	const missingChamps = [];
+	for (const [ind, ele] of (await Promise.all(champCheck)).entries()) {
+		if (ele == false) {
+			missingChamps.push(addNewChampionToDatabase(res.locals.champions[ind]));
 		}
 	}
+	console.log(`pushing ${missingChamps.length} champions to db`);
+	await Promise.all(missingChamps);
 	next();
 };
+
+export const buildTags = async (
+	_req: Request,
+	res: Response,
+	next: NextFunction
+) => {
+	// make all potential rows, all potential cols (excluding last 3)
+	// make a random set to validate
+	const [colObj, rowObj] = await fetchColsandRows().catch((error) =>
+		next(error)
+	);
+	const allCols = colObj.map((ele) => ele.tag);
+	const allRows = rowObj.map((ele) => ele.faction);
+	const fetchThree = (arr: any[]) => {
+		const returnArr = [];
+		if (arr.length < 3) return returnArr;
+		const randSet = new Set();
+		while (returnArr.length < 3) {
+			const i = Math.floor(Math.random() * arr.length);
+			if (randSet.has(i)) {
+				continue;
+			} else {
+				randSet.add(i);
+				returnArr.push(arr[i]);
+			}
+		}
+		return returnArr;
+	};
+	// fetch 3 random unique columns and rows
+	let potentialRows = fetchThree(allRows);
+	let potentialCols = fetchThree(allCols);
+	// attempt to validate the answer
+	for (let i = 0; i < 20; i++) {
+		console.log("Awaiting validate Grid");
+		// so if the promise fulfills then we just return the answer, if it fails then we go again
+		let mistake;
+		const ans = await validateGrid(potentialCols, potentialRows).catch(
+			(err) => {
+				mistake = err;
+			}
+		);
+		if (mistake) {
+			if (mistake == "no answers") {
+				potentialRows = fetchThree(allRows);
+				potentialCols = fetchThree(allCols);
+				continue;
+			} else {
+				return next(mistake.reason);
+			}
+		}
+		res.locals.grid = {
+			data: ans,
+			columns: potentialCols,
+			rows: potentialRows,
+		};
+
+		return next();
+	}
+	return next({
+		message: "failed random generation 20 times",
+		log: "failed generation 20 times",
+	});
+};
+
+export const uploadTags = async (
+	_req: Request,
+	res: Response,
+	next: NextFunction
+) => {
+	return next();
+}
 
 /**
  * Mock Data from getChampions

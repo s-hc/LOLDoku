@@ -127,24 +127,8 @@ export const isTheChampionInTheDatabase = async (
 	return !!result;
 };
 
-// /**
-//  * converts tags to tag1 and tag2
-//  * This should only run if a champion still has the "tags" property instead of tag1, tag2.
-//  * @param champion
-//  * @returns modified champion object
-//  */
-// export const modifyTagsToTag1Tag2 = (champion: any) => {
-// 	console.log(`<--Modifying ${champion.name} tags-->`);
-// 	champion.tag1 = champion.tags[0];
-// 	champion.tags[1]
-// 		? (champion.tag2 = champion.tags[1])
-// 		: (champion.tag2 = "null");
-// 	delete champion.tags;
-// 	return champion;
-// };
-
 /**
- * This function only adds new champions to the database
+ * This function adds new champions to the champ table, then adds their tags to the tags table.
  * @param championToBeAddedToDatabase This is the new champion
  * @param next Express next function
  */
@@ -196,4 +180,64 @@ export const addNewChampionToDatabase = async (
 			);
 			console.error(error);
 		});
+};
+
+/**
+ * This function returns distinct rows and columns.
+ * @param void no specifics needed for parameters.
+ * @returns Promise<any> returns an array of promises for cols & rows
+ */
+export const fetchColsandRows = async (): Promise<any> => {
+	const rowPromise = db.champion.findMany({
+		distinct: ["faction"],
+		select: {
+			faction: true,
+		},
+	});
+	const colPromise = db.role.findMany({
+		distinct: ["tag"],
+		select: {
+			tag: true,
+		},
+	});
+	return Promise.all([colPromise, rowPromise]);
+};
+
+/**
+ *
+ * @param cols
+ * @param rows
+ * @returns Promise<any> fulfill: returns array of array of champs.
+ * Rejects on either SQL error or empty array return
+ */
+export const validateGrid = async (cols: any[], rows: any[]): Promise<any> => {
+	const promiseArr = [];
+	const findChamp = async (faction: string, tag: string) => {
+		return db.champion
+			.findMany({
+				select: {
+					name: true,
+				},
+				where: {
+					faction,
+					tags: {
+						some: {
+							tag,
+						},
+					},
+				},
+			})
+			.then((arr) => {
+				if (arr.length == 0) {
+					return Promise.reject("no answers");
+				} else return arr.map((ele) => ele.name);
+			})
+			.catch((err) => Promise.reject(err));
+	};
+	for (const tag of cols) {
+		for (const faction of rows) {
+			promiseArr.push(findChamp(faction, tag));
+		}
+	}
+	return Promise.all(promiseArr);
 };

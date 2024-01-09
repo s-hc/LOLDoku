@@ -28,3 +28,14 @@ model Role {
   champ Int
   champID Champion @relation(fields: [champ], references: [id])
 }
+
+model Schedule {
+  id  Int    @id @default(autoincrement())
+  date DateTime @db.Date
+  row1 String
+  row2 String
+  row3 String
+  col1 String
+  col2 String
+  col3 String
+}
