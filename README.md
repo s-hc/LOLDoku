@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <img width=100% src="./src/client/assets/LOLDoku.png" alt="Valo Bot Banner">
+  <img width=100% src="./public/LOLDoku.png" alt="Valo Bot Banner">
 </h1>
 
 <h4 align="center"> Immaculate Grid: League of Legends Edition</h4>
@@ -58,7 +58,7 @@ LOLDoku is an open source spin on the classic Immaculate Grid using champions fr
 <br>
 <b>Rules Modal:</b>
 <br>
-<img height="500" src="./assets/gamerules.png" alt="rules"/>
+<img height="500" src="./public/gamerules.png" alt="rules"/>
 
 <hr>
 </details>
