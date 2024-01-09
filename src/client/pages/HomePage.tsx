@@ -14,7 +14,6 @@ function HomePage() {
 	const colClass = ["col-start-2", "col-start-3", "col-start-4"];
 	return (
 		<MaxWidthWrapper>
-			<h1>Home Page</h1>
 			<div className="grid grid-cols-5 grid-rows-5 grid-flow-row mx-auto aspect-square h-[calc(100vh-16px)]">
 				{rows.map((ele, ind) => (
 					<Button

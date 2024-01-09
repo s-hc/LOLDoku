@@ -68,15 +68,11 @@ const Navbar = () => {
 						<div className="flex h-16 items-center">
 							<div className="ml-4 flex lg:ml-0">
 								<Link to="/">
-									<img
-										src={"/src/client/assets/logo.png"}
-										alt="logo"
-										className="h-12"
-									/>
+									<img src={"/LOLDoku.png"} alt="logo" className="h-12" />
 								</Link>
 							</div>
-							<div className="ml-auto flex items-center ">
-								<div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6 ">
+							<div className="ml-auto flex items-center">
+								<div className="flex flex-1 items-center justify-end space-x-6 ">
 									<Dialog>
 										<DialogTrigger
 											className={buttonVariants({ variant: "outline" })}
