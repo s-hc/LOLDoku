@@ -3,6 +3,7 @@ import {
 	getChampions,
 	cacheChampions,
 	buildTags,
+	uploadTags,
 } from "../controllers/championController.js";
 
 const championRoutes = express.Router();
@@ -21,8 +22,13 @@ championRoutes.get(
 	}
 );
 
-championRoutes.get("/build", buildTags, (_req: Request, res: Response) => {
-	return res.status(200).json(res.locals.grid);
-});
+championRoutes.get(
+	"/build",
+	buildTags,
+	uploadTags,
+	(_req: Request, res: Response) => {
+		return res.status(200).json(res.locals.grid);
+	}
+);
 
 export default championRoutes;

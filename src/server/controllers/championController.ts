@@ -128,7 +128,7 @@ export const uploadTags = async (
 	res: Response,
 	next: NextFunction
 ) => {
-	const { columns, rows } = res.locals.data;
+	const { columns, rows } = res.locals.grid;
 	const uploadNum = await uploadGrid(columns, rows).catch((err) => next(err));
 	res.locals.num = uploadNum["id"] ?? -1;
 	console.log("reslocals num is", res.locals.num);
