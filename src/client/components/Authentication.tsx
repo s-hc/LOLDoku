@@ -7,6 +7,7 @@ import {
 	DialogTitle,
 	DialogTrigger,
 } from "./ui/dialog";
+import { getAuthUrl } from "@/client/lib/importMetaFunctions/getAuthUrl";
 
 /**
  * Authentication component
@@ -16,8 +17,7 @@ import {
  */
 export default function Authentication() {
 	const handleGoogleAuth = () => {
-		const backendUrl = `${import.meta.env.VITE_BACKEND_URL}/auth/google`;
-		console.log("this is the backend url", backendUrl);
+		const backendUrl = getAuthUrl();
 		window.location.href = backendUrl;
 	};
 
