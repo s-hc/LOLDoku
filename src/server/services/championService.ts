@@ -241,3 +241,26 @@ export const validateGrid = async (cols: any[], rows: any[]): Promise<any> => {
 	}
 	return Promise.all(promiseArr);
 };
+
+export const uploadGrid = async (cols: string[], rows: string[]) => {
+	// set the first day, should never change realistically.
+	const dayOne = new Date("Jan 9 2024");
+	// get the latest day and use it when we up date?
+	// take rows and turn them into row1-3
+	// take cols and turn them into col1-3
+	// take all answers
+	return db.schedule.create({
+		data: {
+			row1: rows[0],
+			row2: rows[1],
+			row3: rows[2],
+			col1: cols[0],
+			col2: cols[1],
+			col3: cols[2],
+			date: dayOne,
+		},
+		select: {
+			id: true,
+		},
+	});
+};

@@ -5,6 +5,7 @@ import {
 	isTheChampionInTheDatabase,
 	fetchColsandRows,
 	validateGrid,
+	uploadGrid,
 } from "../services/championService.js";
 
 /**
@@ -127,8 +128,12 @@ export const uploadTags = async (
 	res: Response,
 	next: NextFunction
 ) => {
+	const { columns, rows } = res.locals.data;
+	const uploadNum = await uploadGrid(columns, rows).catch((err) => next(err));
+	res.locals.num = uploadNum["id"] ?? -1;
+	console.log("reslocals num is", res.locals.num);
 	return next();
-}
+};
 
 /**
  * Mock Data from getChampions
