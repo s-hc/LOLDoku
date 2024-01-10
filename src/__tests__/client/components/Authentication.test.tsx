@@ -1,17 +1,17 @@
 import Authentication from "@/client/components/Authentication";
 import { render, screen, fireEvent } from "@testing-library/react";
 
-jest.mock("@/client/config", () => ({
-	getBackendUrl: () => "http://localhost:3000/auth/google",
+// Mock Backend Functions
+jest.mock("@/client/lib/importMetaFunctions/getAuthUrl", () => ({
+	getAuthUrl: () => "http://localhost:3000/auth/google",
 }));
-
-// jest.mock("@/client/config", () => ({
-// 	getUserUrl: () => "http://localhost:3000/auth/get-user",
-// 	getLogoutUrl: () => "http://localhost:3000/auth/logout",
-// }));
 
 jest.mock("@/client/lib/importMetaFunctions/getUserUrl", () => ({
 	getUserUrl: () => "http://localhost:3000/auth/get-user",
+}));
+
+jest.mock("@/client/lib/importMetaFunctions/getLogoutUrl", () => ({
+	getLogoutUrl: () => "http://localhost:3000/auth/logout",
 }));
 
 describe("<Authentication />", () => {

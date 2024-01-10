@@ -31,13 +31,19 @@ const renderNavbar = (user = null) => {
 	);
 };
 
-jest.mock("@/client/config", () => ({
-	getBackendUrl: () => "http://localhost:3000",
+// Mock Backend Functions
+jest.mock("@/client/lib/importMetaFunctions/getAuthUrl", () => ({
+	getAuthUrl: () => "http://localhost:3000/auth/google",
 }));
 
 jest.mock("@/client/lib/importMetaFunctions/getUserUrl", () => ({
 	getUserUrl: () => "http://localhost:3000/auth/get-user",
 }));
+
+jest.mock("@/client/lib/importMetaFunctions/getLogoutUrl", () => ({
+	getLogoutUrl: () => "http://localhost:3000/auth/logout",
+}));
+
 describe("Navbar Component", () => {
 	// Restore the original window.location object after each test to prevent side effects <particularly in logout reload>
 	let originalLocation: Location;

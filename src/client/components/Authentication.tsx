@@ -7,7 +7,7 @@ import {
 	DialogTitle,
 	DialogTrigger,
 } from "./ui/dialog";
-import { getBackendUrl } from "@/client/config";
+import { getAuthUrl } from "@/client/lib/importMetaFunctions/getAuthUrl";
 
 /**
  * Authentication component
@@ -17,7 +17,7 @@ import { getBackendUrl } from "@/client/config";
  */
 export default function Authentication() {
 	const handleGoogleAuth = () => {
-		const backendUrl = getBackendUrl();
+		const backendUrl = getAuthUrl();
 		window.location.href = backendUrl;
 	};
 
