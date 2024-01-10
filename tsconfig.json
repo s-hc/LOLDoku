@@ -22,6 +22,11 @@
 		// Remove "noEmit": true to allow the compiler to output files
 		"declaration": true // Optional: Generates corresponding '.d.ts' file.
 	},
-	"include": ["src/**/*", "prisma"],
+	"include": [
+		"src/**/*",
+		"vite-env.d.ts",
+		"public/logo.png",
+		"public/LOLDoku.png"
+	],
 	"exclude": ["node_modules", "dist", "**/*.spec.ts"]
 }

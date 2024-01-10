@@ -1,5 +1,8 @@
 import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
+// import { getUserUrl, getLogoutUrl } from "@/client/config";
+import { getUserUrl } from "@/client/lib/importMetaFunctions/getUserUrl";
+import { getLogoutUrl } from "@/client/lib/importMetaFunctions/getLogoutUrl";
 
 /**
  * Combines class names using clsx and tailwind-merge.
@@ -20,8 +23,10 @@ export function cn(...inputs: ClassValue[]) {
  * @returns {Promise<Object|null>} The user data object or null in case of an error.
  */
 export async function fetchUserData() {
+	const userUrl = getUserUrl();
 	try {
-		const response = await fetch("http://localhost:3000/auth/get-user", {
+		// const response = await fetch("http://localhost:3000/auth/get-user", {
+		const response = await fetch(`${userUrl}`, {
 			credentials: "include",
 		});
 		if (!response.ok) {
@@ -42,8 +47,9 @@ export async function fetchUserData() {
  * @returns {Promise<Object|null>} The response object or null in case of an error.
  */
 export async function logOut() {
+	const logoutUrl = getLogoutUrl();
 	try {
-		const response = await fetch("http://localhost:3000/auth/logout", {
+		const response = await fetch(`${logoutUrl}`, {
 			credentials: "include",
 		});
 		if (!response.ok) {
