@@ -35,6 +35,9 @@ jest.mock("@/client/config", () => ({
 	getBackendUrl: () => "http://localhost:3000",
 }));
 
+jest.mock("@/client/lib/importMetaFunctions/getUserUrl", () => ({
+	getUserUrl: () => "http://localhost:3000/auth/get-user",
+}));
 describe("Navbar Component", () => {
 	// Restore the original window.location object after each test to prevent side effects <particularly in logout reload>
 	let originalLocation: Location;

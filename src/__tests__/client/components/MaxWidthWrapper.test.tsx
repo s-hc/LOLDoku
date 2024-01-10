@@ -1,6 +1,10 @@
 import MaxWidthWrapper from "@/client/components/MaxWidthWrapper";
 import { render, screen } from "@testing-library/react";
 
+jest.mock("@/client/lib/importMetaFunctions/getUserUrl", () => ({
+	getUserUrl: () => "http://localhost:3000/auth/get-user",
+}));
+
 describe("<MaxWidthWrapper />", () => {
 	it("renders its children", () => {
 		render(

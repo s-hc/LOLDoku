@@ -10,6 +10,10 @@ jest.mock("@/client/config", () => ({
 // 	getLogoutUrl: () => "http://localhost:3000/auth/logout",
 // }));
 
+jest.mock("@/client/lib/importMetaFunctions/getUserUrl", () => ({
+	getUserUrl: () => "http://localhost:3000/auth/get-user",
+}));
+
 describe("<Authentication />", () => {
 	it("should render the Authentication component", () => {
 		render(<Authentication />);
