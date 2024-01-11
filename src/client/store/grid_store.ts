@@ -1,37 +1,18 @@
 import { create } from "zustand";
-
+import {data} from "../../server/demoData.json"
 export interface GridState {
   grid: Array<{
     name?:string
+    champNum?:number
   }>
-  makeGuess: (guess:string, ind:number) => void
+  makeGuess: (guess:string, num:number, ind:number) => void
 }
 
 export const useGridStore = create<GridState>()((set) => ({
 	grid: Array(9).fill({}),
-	makeGuess: (guess:string, ind:number) => set((state) => ({ grid: state.grid.toSpliced(ind, 1, {name:guess}) })),
-}));
-/* 
-type State = {
-  deep: {
-    nested: {
-      obj: { count: number }
+	makeGuess: (guess:string, num:number, ind:number) => {
+    if( data[ind].includes(guess)){
+      set((state) => ({ grid: state.grid.toSpliced(ind, 1, {name:guess, champNum:num}) }))}
     }
-  }
-}
-
-
-
-set((state) => ({
-      deep: {
-        ...state.deep,
-        nested: {
-          ...state.deep.nested,
-          obj: {
-            ...state.deep.nested.obj,
-            count: state.deep.nested.obj.count + 1
-          }
-        }
-      }
-    }))
-    */
+    ,
+}));

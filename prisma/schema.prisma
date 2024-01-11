@@ -1,0 +1,41 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider          = "postgresql"
+  url               = env("DATABASE_URL")
+  shadowDatabaseUrl = env("SHADOW_DATABASE_URL")
+}
+
+model Champion {
+  id       Int    @id @unique @default(autoincrement())
+  name     String
+  uri      String
+  xOffset  Int
+  yOffset  Int
+  faction  String
+  resource String
+  tags Role[]
+}
+
+model Role {
+  id  Int    @id @default(autoincrement())
+  tag String
+  champ Int
+  champID Champion @relation(fields: [champ], references: [id])
+}
+
+model Schedule {
+  id  Int    @id @default(autoincrement())
+  date DateTime @db.Date
+  row1 String
+  row2 String
+  row3 String
+  col1 String
+  col2 String
+  col3 String
+}

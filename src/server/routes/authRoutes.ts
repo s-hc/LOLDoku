@@ -35,7 +35,8 @@ authRouter.get("/google/callback", googleAuthCallback);
  * @param {Response} res - Express response object
  */
 authRouter.get("/success", (_req: Request, res: Response) => {
-	res.redirect("http://localhost:5173/");
+  const frontendUrl = process.env.FRONTEND_URL
+	res.redirect(frontendUrl || 'http://localhost:5173');
 });
 
 /**
@@ -44,7 +45,7 @@ authRouter.get("/success", (_req: Request, res: Response) => {
 authRouter.get("/logout", logout);
 
 /**
- * Retrieves current user's session dat if authenticated
+ * Retrieves current user's session data if authenticated
  * @param {Request} req - Express request object
  * @param {Response} res - Express response object
  */

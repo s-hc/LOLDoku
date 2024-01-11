@@ -1,6 +1,15 @@
 import { cn, fetchUserData, logOut } from "@/client/lib/utils"; // replace with your actual file path
 import fetchMock from "jest-fetch-mock";
 
+// Mock Backend Functions
+jest.mock("@/client/lib/importMetaFunctions/getUserUrl", () => ({
+	getUserUrl: () => "http://localhost:3000/auth/get-user",
+}));
+
+jest.mock("@/client/lib/importMetaFunctions/getLogoutUrl", () => ({
+	getLogoutUrl: () => "http://localhost:3000/auth/logout",
+}));
+
 describe("cn function", () => {
 	it("should correctly merge class names", () => {
 		const result = cn("class1", "class2", "class3");

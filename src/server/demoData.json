@@ -1,15 +1,15 @@
 {
 	"data": [
-		"alistar",
-		"lucian",
-		"nami",
-		"ekko",
-		"teemo",
-		"thresh",
-		"poppy",
-		"aatrox",
-		"brand"
+		["Leona"],
+		["Maokai", "Yorick"],
+		["Urgot", "Blitzcrank", "Dr. Mundo", "Singed", "Warwick", "Zac"],
+		["Aphelios"],
+		["Kalista"],
+		["Jinx", "Twitch", "Zeri"],
+		["Pantheon"],
+		["Viego", "Gwen"],
+		["Twitch", "Ekko"]
 	],
-	"columns": ["ionia", "yordle", "zaun"],
+	"columns": ["mount targon", "shadow isles", "zaun"],
 	"rows": ["tank", "marksman", "assassin"]
 }
