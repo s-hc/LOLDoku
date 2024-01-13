@@ -10,7 +10,7 @@
     "build": "vite build",
     "build:watch": "tsc -w",
     "preview": "vite preview",
-    "migrate": "npx run prisma migrate dev"
+    "migrate": "npx prisma migrate dev"
   },
   "keywords": [],
   "author": "",
