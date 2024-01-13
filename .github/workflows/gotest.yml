@@ -23,5 +23,7 @@ jobs:
           check-latest: true
 
       - name: make questions
+        env:
+          TEST-ENV: ${{secrets.question-storage}}
         working-directory: ./src/testgo
         run: go run .
