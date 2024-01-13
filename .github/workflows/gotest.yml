@@ -24,6 +24,6 @@ jobs:
 
       - name: make questions
         env:
-          TEST-ENV: ${{secrets.question-storage}}
+          TEST-ENV: ${{secrets.TEST_ENV}}
         working-directory: ./src/testgo
         run: go run .
