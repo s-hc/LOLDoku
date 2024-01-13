@@ -1,0 +1,27 @@
+name: Testing golang out
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Golang setup
+        uses: actions/setup-go@v4
+        with:
+          go-version: stable
+          check-latest: true
+
+      - name: make questions
+        working-directory: ./src/testgo
+        run: go run .
