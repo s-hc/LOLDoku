@@ -25,5 +25,6 @@ jobs:
       - name: make questions
         env:
           TEST-ENV: ${{secrets.TEST_ENV}}
+          A1: ${{secrets.A1}}
         working-directory: ./src/testgo
         run: go run .
