@@ -1,5 +1,5 @@
 import Grid from "../components/Grid";
-import json from "../../server/demoData.json";
+import json from "../questions.json";
 import MaxWidthWrapper from "../components/MaxWidthWrapper";
 import { useGuessesStore } from "../store/guesses_store";
 import { Button } from "../components/ui/button";
@@ -7,8 +7,8 @@ import { Button } from "../components/ui/button";
 function HomePage() {
 	const guesses = useGuessesStore((state) => state.guesses);
 	const giveUp = useGuessesStore((state) => state.giveup);
-	const cols = json.columns;
-	const rows = json.rows;
+	const cols = json.Columns;
+	const rows = json.Rows;
 
 	const rowClass = ["row-start-2", "row-start-3", "row-start-4"];
 	const colClass = ["col-start-2", "col-start-3", "col-start-4"];
@@ -36,7 +36,7 @@ function HomePage() {
 					</Button>
 				))}
 
-				<Grid answers={json.data} />
+				<Grid answers={json.Data} />
 				<div className="row-start-3 col-start-5 my-auto flex flex-col px-4 h-full justify-center gap-2">
 					<Button disabled variant="secondary">
 						{`Guesses: ${guesses}`}
