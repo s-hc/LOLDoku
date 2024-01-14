@@ -3,6 +3,9 @@ name: Vite Build + GH Pages Publish
 on:
   push:
     branches: ["main"]
+  schedule:
+    - cron: "0 8 * * *"
+  workflow_dispatch:
 permissions:
   contents: read
   pages: write
@@ -19,6 +22,19 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
+
+      #golang run to edit my demoData.json
+      - name: Golang setup
+        uses: actions/setup-go@v4
+        with:
+          go-version: stable
+          check-latest: true
+          cache-dependency-path: ./src/question-builder/go.sum
+      - name: make questions
+        working-directory: ./src/question-builder
+        env:
+          DATABASE_URL: ${{secrets.DATABASE_URL}}
+        run: go run .
 
       - name: Use Node.js 20
         uses: actions/setup-node@v3
