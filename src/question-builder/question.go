@@ -23,7 +23,6 @@ func main() {
 	// get the time of start day (idk Jan. 15?) until current date
 	// get info from table
 	fmt.Printf("it's been %d days since the 10th\n", gameNum)
-	fmt.Printf("hello world\n")
 	
 	temp_URL, ok:= os.LookupEnv("DATABASE_URL")
 	if !ok{
