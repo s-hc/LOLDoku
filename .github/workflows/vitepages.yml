@@ -4,6 +4,7 @@ on:
   push:
     branches: ["main"]
   schedule:
+    # currently scheduled to run every day @ midnight PST
     - cron: "0 8 * * *"
   workflow_dispatch:
 permissions:
@@ -30,7 +31,7 @@ jobs:
           go-version: stable
           check-latest: true
           cache-dependency-path: ./src/question-builder/go.sum
-      - name: make questions
+      - name: Build questions from DB
         working-directory: ./src/question-builder
         env:
           DATABASE_URL: ${{secrets.DATABASE_URL}}
@@ -41,7 +42,7 @@ jobs:
         with:
           node-version: "20"
 
-      - name: Build
+      - name: Vite build dist file
         run: |
           npm install
           npm run build
