@@ -67,11 +67,12 @@ export const buildTags = async (
 ) => {
 	// make all potential rows, all potential cols (excluding last 3)
 	// make a random set to validate
+	// cols are factions rows are roles
 	const [colObj, rowObj] = await fetchColsandRows().catch((error) =>
 		next(error)
 	);
-	const allCols = colObj.map((ele) => ele.tag);
-	const allRows = rowObj.map((ele) => ele.faction);
+	const allCols = colObj.map((ele) => ele.faction);
+	const allRows = rowObj.map((ele) => ele.tag);
 	const fetchThree = (arr: any[]) => {
 		const returnArr = [];
 		if (arr.length < 3) return returnArr;
