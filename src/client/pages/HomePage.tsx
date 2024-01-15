@@ -12,9 +12,10 @@ function HomePage() {
 
 	const rowClass = ["row-start-2", "row-start-3", "row-start-4"];
 	const colClass = ["col-start-2", "col-start-3", "col-start-4"];
+
 	return (
 		<MaxWidthWrapper>
-			<div className="grid grid-cols-5 grid-rows-5 grid-flow-row mx-auto aspect-square h-[calc(100vh-16px)]">
+			<div className="grid grid-cols-4 grid-rows-5 px-5 grid-flow-row mx-auto aspect-square">
 				{rows.map((ele, ind) => (
 					<Button
 						disabled
@@ -37,7 +38,7 @@ function HomePage() {
 				))}
 
 				<Grid answers={json.Data} />
-				<div className="row-start-3 col-start-5 my-auto flex flex-col px-4 h-full justify-center gap-2">
+				<div className="my-auto h-full gap-2 flex px-4 justify-center flex-col row-start-5 col-start-2 col-end-5">
 					<Button disabled variant="secondary">
 						{`Guesses: ${guesses}`}
 					</Button>
