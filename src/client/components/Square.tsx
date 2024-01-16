@@ -6,7 +6,6 @@ import {
 	DialogHeader,
 	DialogTitle,
 	DialogTrigger,
-	DialogClose,
 } from "@/client/components/ui/dialog";
 import {
 	Command,
@@ -18,7 +17,7 @@ import {
 } from "@/client/components/ui/command";
 import raw from "@/server/demoRaw.json";
 import { useGuessesStore } from "../store/guesses_store";
-import { CSSProperties } from "react";
+import { CSSProperties, useState } from "react";
 
 type Props = {
 	champion: {
@@ -59,6 +58,9 @@ const Square = ({ champion, answer, squareNum, makeGuess }: Props) => {
 			backgroundSize: "cover",
 		};
 	}
+
+	const [open, setOpen] = useState(false);
+
 	return champExists ? (
 		<Button
 			disabled={true}
@@ -71,7 +73,7 @@ const Square = ({ champion, answer, squareNum, makeGuess }: Props) => {
 		</Button>
 	) : (
 		// guessing dropdown menu if there is not an answer
-		<Dialog>
+		<Dialog open={open} onOpenChange={setOpen}>
 			<DialogTrigger asChild>
 				<Button
 					disabled={haveGuesses <= 0}
@@ -91,18 +93,18 @@ const Square = ({ champion, answer, squareNum, makeGuess }: Props) => {
 						<CommandEmpty>No results found.</CommandEmpty>
 						<CommandGroup>
 							{champArr.map((ele, ind) => (
-								<CommandItem key={`champNo${ind}`}>
-									<DialogClose
-										className="size-full"
-										onClick={() => {
-											// if the guess is correct, trigger makeGuess.
-											// if the guess is incorrect, set the style of this obj to the angry red???
-											makeGuess(ele.name, ind, squareNum);
-											decrease();
-										}}
-									>
-										{ele.name}
-									</DialogClose>
+								<CommandItem
+									key={`champNo${ind}`}
+									className="size-full"
+									onSelect={() => {
+										// if the guess is correct, trigger makeGuess.
+										// if the guess is incorrect, set the style of this obj to the angry red???
+										makeGuess(ele.name, ind, squareNum);
+										decrease();
+										setOpen(false);
+									}}
+								>
+									{ele.name}
 								</CommandItem>
 							))}
 						</CommandGroup>

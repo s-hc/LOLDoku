@@ -188,13 +188,13 @@ export const addNewChampionToDatabase = async (
  * @returns Promise<any> returns an array of promises for cols & rows
  */
 export const fetchColsandRows = async (): Promise<any> => {
-	const rowPromise = db.champion.findMany({
+	const colPromise = db.champion.findMany({
 		distinct: ["faction"],
 		select: {
 			faction: true,
 		},
 	});
-	const colPromise = db.role.findMany({
+	const rowPromise = db.role.findMany({
 		distinct: ["tag"],
 		select: {
 			tag: true,
@@ -234,8 +234,8 @@ export const validateGrid = async (cols: any[], rows: any[]): Promise<any> => {
 			})
 			.catch((err) => Promise.reject(err));
 	};
-	for (const tag of cols) {
-		for (const faction of rows) {
+	for (const faction of cols) {
+		for (const tag of rows) {
 			promiseArr.push(findChamp(faction, tag));
 		}
 	}

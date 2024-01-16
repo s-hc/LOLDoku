@@ -2,8 +2,8 @@ import { cn } from "@/client/lib/utils";
 import { ReactNode } from "react";
 
 type Props = {
-	className?: string;
-	children: ReactNode;
+	className?: string,
+	children: ReactNode,
 };
 /**
  * MaxWidthWrapper Component

@@ -9,7 +9,7 @@ const Grid = ({ answers }: Props) => {
 	const gridArr = useGridStore((state) => state.grid);
 	const makeGuess = useGridStore((state) => state.makeGuess);
 	return (
-		<div className="px-0 row-start-2 row-span-3 col-span-3 grid grid-cols-subgrid grid-flow-row gap-1 ">
+		<div className="grid grid-cols-subgrid grid-flow-row row-start-2 row-span-3 col-span-3 gap-1 px-0">
 			{gridArr.map((ele, ind) => (
 				<Square
 					key={`square${ind}`}
