@@ -1,12 +1,13 @@
 import { Request, Response, NextFunction } from "express";
+import { fetchChampionData } from "../services/championService.js";
+
 import {
 	addNewChampionToDatabase,
-	fetchChampionData,
 	isTheChampionInTheDatabase,
 	fetchColsandRows,
 	validateGrid,
 	uploadGrid,
-} from "../services/championService.js";
+} from "../services/dbService.js";
 
 /**
  * Controller to handle the fetching of champion data.
