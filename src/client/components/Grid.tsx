@@ -13,8 +13,7 @@ const Grid = ({ answers }: Props) => {
 			{gridArr.map((ele, ind) => (
 				<Square
 					key={`square${ind}`}
-					champion={ele.name}
-					champNum={ele.champNum}
+					champion={ele}
 					answer={answers[ind]}
 					squareNum={ind}
 					makeGuess={makeGuess}

@@ -6,7 +6,6 @@ import {
 	DialogHeader,
 	DialogTitle,
 	DialogTrigger,
-	DialogClose,
 } from "@/client/components/ui/dialog";
 import {
 	Command,
@@ -18,56 +17,70 @@ import {
 } from "@/client/components/ui/command";
 import raw from "@/server/demoRaw.json";
 import { useGuessesStore } from "../store/guesses_store";
+import { CSSProperties, useState } from "react";
 
 type Props = {
-	champion: string | undefined,
-	champNum: number | undefined,
+	champion: {
+		name?: string,
+		champNum?: number,
+	},
 	answer: string[],
 	squareNum: number,
 	makeGuess: (guess: string, num: number, ind: number) => void,
 };
 
-const Square = ({
-	champion,
-	answer,
-	champNum,
-	squareNum,
-	makeGuess,
-}: Props) => {
+const Square = ({ champion, answer, squareNum, makeGuess }: Props) => {
 	const decrease = useGuessesStore((state) => state.decrease);
 	const champArr = raw;
 	const haveGuesses = useGuessesStore((state) => state.guesses);
-	const selectedChamp =
-		champNum != undefined ? champArr[champNum].image : undefined;
-	const inlineStyle =
-		champNum != undefined
-			? {
-					backgroundImage: `url(${selectedChamp.uri})`,
-					backgroundPosition: `${
-						(100 * selectedChamp.x) / selectedChamp.width
-					}% ${(100 * selectedChamp.y) / selectedChamp.height}%`,
-					backgroundSize: "cover",
-			  }
-			: {};
-	return (
-		// champion != undefined ? //code here : //code here
-		// <div className="border-solid border-2">{champion ?? ""}</div>
-		// if champion exists, <Button>champion</
-		// if not, dialog+trigger
+	let imageObj: {
+		uri: any,
+		x: any,
+		width: any,
+		y: any,
+		height: any,
+		title?: string,
+		subtitle?: string,
+		description?: string,
+		encoding?: string,
+		"featured-champions"?: any[],
+	};
+	let inlineStyle: CSSProperties;
+	const champExists = champion.name != undefined;
+	console.log(champExists, "does this champ exist");
+	if (champExists) {
+		imageObj = champArr[champion.champNum].image;
+		inlineStyle = {
+			backgroundImage: `url(${imageObj.uri})`,
+			backgroundPosition: `${(100 * imageObj.x) / imageObj.width}% ${
+				(100 * imageObj.y) / imageObj.height
+			}%`,
+			backgroundSize: "cover",
+		};
+	}
 
-		<Dialog>
+	const [open, setOpen] = useState(false);
+
+	return champExists ? (
+		<Button
+			disabled={true}
+			variant="outline"
+			size={"lg"}
+			className="size-full bg-cover"
+			style={inlineStyle}
+		>
+			{champion.name}
+		</Button>
+	) : (
+		// guessing dropdown menu if there is not an answer
+		<Dialog open={open} onOpenChange={setOpen}>
 			<DialogTrigger asChild>
 				<Button
-					disabled={champion != undefined || haveGuesses <= 0}
+					disabled={haveGuesses <= 0}
 					variant="outline"
 					size={"lg"}
-					className="size-full bg-cover"
-					// style={champion!=undefined ? inlineStyle:{}}
-					style={inlineStyle}
-					// className="w-[calc(952px/5)] h-[calc(952px/5)] "
-				>
-					{champion ?? ""}
-				</Button>
+					className="size-full"
+				></Button>
 			</DialogTrigger>
 			<DialogContent>
 				<DialogHeader>
@@ -80,16 +93,18 @@ const Square = ({
 						<CommandEmpty>No results found.</CommandEmpty>
 						<CommandGroup>
 							{champArr.map((ele, ind) => (
-								<CommandItem key={`champNo${ind}`}>
-									<DialogClose
-										className="size-full"
-										onClick={() => {
-											makeGuess(ele.name, ind, squareNum);
-											decrease();
-										}}
-									>
-										{ele.name}
-									</DialogClose>
+								<CommandItem
+									key={`champNo${ind}`}
+									className="size-full"
+									onSelect={() => {
+										// if the guess is correct, trigger makeGuess.
+										// if the guess is incorrect, set the style of this obj to the angry red???
+										makeGuess(ele.name, ind, squareNum);
+										decrease();
+										setOpen(false);
+									}}
+								>
+									{ele.name}
 								</CommandItem>
 							))}
 						</CommandGroup>
