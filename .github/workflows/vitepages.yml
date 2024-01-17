@@ -30,12 +30,12 @@ jobs:
         with:
           go-version: stable
           check-latest: true
-          cache-dependency-path: ./src/question-builder/go.sum
+          cache-dependency-path: ./src/go_files/question-builder/go.sum
       - name: Build questions from DB
-        working-directory: ./src/question-builder
+        working-directory: ./src/go_files
         env:
           DATABASE_URL: ${{secrets.DATABASE_URL}}
-        run: go run .
+        run: go run ./question-builder
 
       - name: Use Node.js 20
         uses: actions/setup-node@v3

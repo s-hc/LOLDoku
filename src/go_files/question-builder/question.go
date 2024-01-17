@@ -8,6 +8,7 @@ import (
 	"time"
 
 	"github.com/jackc/pgx/v5"
+	"github.com/joho/godotenv"
 )
 
 func check(e error, spot string) {
@@ -26,8 +27,9 @@ func main() {
 	
 	temp_URL, ok:= os.LookupEnv("DATABASE_URL")
 	if !ok{
-		fmt.Fprintf(os.Stderr,"database URL missing!\n")
-		os.Exit(1)	
+		err := godotenv.Load("../../.env")
+		check(err, "local env load")
+		temp_URL = os.Getenv("DATABASE_URL")
 	}
 	conn, err := pgx.Connect(context.Background(), temp_URL)
 	check(err, "database connection")
