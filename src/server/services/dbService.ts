@@ -1,5 +1,7 @@
 import { db } from "../utils/db.server.js";
 
+//dbService contains all files used in the database.
+
 /**
  * Helper function to decide to skip entries or not
  * @param name
@@ -15,6 +17,18 @@ export const isTheChampionInTheDatabase = async (
 	});
 	return !!result;
 };
+
+interface ChampRes {
+	name: string;
+	releaseDate: string;
+	champDescription: string;
+	imageUri: string;
+	xOffset: number;
+	yOffset: number;
+	faction: string;
+	tags: string[];
+	resource: string;
+}
 
 /**
  * This function adds new champions to the champ table, then adds their tags to the tags table.
