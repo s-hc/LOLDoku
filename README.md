@@ -32,7 +32,7 @@
   •
   <a href="#installation-guide">Installation Guide</a>
   •
-  <a href="#scripts">Contributions</a>
+  <a href="#scripts">Scripts</a>
   •
   <a href="#schema">Schema</a>
   •
