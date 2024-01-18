@@ -44,7 +44,7 @@
 
 ## About
 
-LOLDoku is an open source spin on the classic Immaculate Grid using champions from the popular MOBA game League of Legends. The goal of the game is to fill in the 3x3 grid with answers that match the clues given. New puzzles are generated daily, and users can sign in (OAuth2.0) to access their stats and archived puzzles.
+[LOLDoku](s-hc.github.io/LOLDoku/) is an open source spin on the classic Immaculate Grid using champions from the popular MOBA game League of Legends. The goal of the game is to fill in the 3x3 grid with answers that match the clues given. New puzzles are generated daily, and users can sign in (OAuth2.0) to access their stats.
 
 > [!Important]
 >
@@ -81,17 +81,11 @@ LOLDoku is an open source spin on the classic Immaculate Grid using champions fr
 
 ## Features
 
-• Secure GitHub and Google sign in! Sign in with your GitHub or Google account to access your stats and archived puzzles.
+• Secure GitHub and Google sign in! Sign in with your Google account.
 
 • Dark Mode! Enjoy LOLDoku in your light or dark theme of choice.
 
-• Daily puzzles! New puzzles are generated daily at midnight EST.
-
-• Uniqueness Score: Your uniqueness score is all of your answer's percentages added up. The percentages show you how many players put the same correct answer as you. The lower the score, the better!
-
-• Stats! Sign in to access user stats and archived puzzles.
-
-• Leaderboards! See how you stack up against other players.
+• Daily puzzles! New unique puzzles are generated daily at midnight PST.
 
 • If you run into any bugs or have feedback: [spartanhackers0+loldoku@gmail.com](mailto:spartanhackers0+loldoku@gmail.com)
 
