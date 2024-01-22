@@ -52,9 +52,8 @@ const Square = ({ champion, answer, squareNum, makeGuess }: Props) => {
 		imageObj = champArr[champion.champNum].image;
 		inlineStyle = {
 			backgroundImage: `url(${imageObj.uri})`,
-			backgroundPosition: `${(100 * imageObj.x) / imageObj.width}% ${
-				(100 * imageObj.y) / imageObj.height
-			}%`,
+			backgroundPosition: `${(100 * imageObj.x) / imageObj.width}% ${(100 * imageObj.y) / imageObj.height
+				}%`,
 			backgroundSize: "cover",
 		};
 	}
@@ -66,10 +65,12 @@ const Square = ({ champion, answer, squareNum, makeGuess }: Props) => {
 			disabled={true}
 			variant="outline"
 			size={"lg"}
-			className="size-full bg-cover"
+			className="items-end px-0 bg-cover size-full"
 			style={inlineStyle}
 		>
-			{champion.name}
+			<div className="w-full text-md bg-background size-6">
+				{champion.name}
+			</div>
 		</Button>
 	) : (
 		// guessing dropdown menu if there is not an answer
