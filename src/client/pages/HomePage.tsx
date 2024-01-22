@@ -15,12 +15,12 @@ function HomePage() {
 
 	return (
 		<MaxWidthWrapper>
-			<div className="grid grid-cols-4 grid-rows-5 px-5 grid-flow-row mx-auto aspect-square">
+			<div className="grid grid-flow-row grid-cols-5 grid-rows-5 px-5 mx-auto aspect-square">
 				{rows.map((ele, ind) => (
 					<Button
 						disabled
 						variant={"secondary"}
-						className={` w-1/2 mx-auto my-auto ${rowClass[ind]}`}
+						className={`w-1/2 mx-auto my-auto ${rowClass[ind]}`}
 						key={`row${ind}`}
 					>
 						{ele}
@@ -30,7 +30,7 @@ function HomePage() {
 					<Button
 						disabled
 						variant={"secondary"}
-						className={` w-1/2  mx-auto my-auto ${colClass[ind]}`}
+						className={`w-1/2  mx-auto my-auto ${colClass[ind]}`}
 						key={`col${ind}`}
 					>
 						{ele}
@@ -38,7 +38,7 @@ function HomePage() {
 				))}
 
 				<Grid answers={json.Data} />
-				<div className="my-auto h-full gap-2 flex px-4 justify-center flex-col row-start-5 col-start-2 col-end-5">
+				<div className="flex flex-col justify-center h-full col-start-2 col-end-5 row-start-5 gap-2 px-4 my-auto">
 					<Button disabled variant="secondary">
 						{`Guesses: ${guesses}`}
 					</Button>
