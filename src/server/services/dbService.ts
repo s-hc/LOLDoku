@@ -91,16 +91,22 @@ export const addNewChampionToDatabase = async (
  * @returns Promise<any> returns an array of promises for cols & rows
  */
 export const fetchColsandRows = async (): Promise<any> => {
-	const colPromise = db.champion.findMany({
-		distinct: ["faction"],
+	const colPromise = db.header.findMany({
+		distinct: ["headline"],
 		select: {
-			faction: true,
+			headline: true,
+		},
+		where: {
+			roleOrFaction: 2,
 		},
 	});
-	const rowPromise = db.role.findMany({
-		distinct: ["tag"],
+	const rowPromise = db.header.findMany({
+		distinct: ["headline"],
 		select: {
-			tag: true,
+			headline: true,
+		},
+		where: {
+			roleOrFaction: 1,
 		},
 	});
 	return Promise.all([colPromise, rowPromise]);
@@ -116,18 +122,44 @@ export const fetchColsandRows = async (): Promise<any> => {
 export const validateGrid = async (cols: any[], rows: any[]): Promise<any> => {
 	const promiseArr = [];
 	const findChamp = async (faction: string, tag: string) => {
+		const col = await db.header.findFirst({
+			select: {
+				id: true,
+			},
+			where: {
+				headline: faction,
+			},
+		});
+		const row = await db.header.findFirst({
+			select: {
+				id: true,
+			},
+			where: {
+				headline: tag,
+			},
+		});
 		return db.champion
 			.findMany({
 				select: {
 					name: true,
 				},
 				where: {
-					faction,
-					tags: {
-						some: {
-							tag,
+					AND: [
+						{
+							headers: {
+								some: {
+									header: row.id,
+								},
+							},
 						},
-					},
+						{
+							headers: {
+								some: {
+									header: col.id,
+								},
+							},
+						},
+					],
 				},
 			})
 			.then((arr) => {
