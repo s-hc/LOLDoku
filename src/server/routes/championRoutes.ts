@@ -4,6 +4,7 @@ import {
 	cacheChampions,
 	buildTags,
 	uploadTags,
+	makeHeaders,
 } from "../controllers/championController.js";
 
 const championRoutes = express.Router();
@@ -30,5 +31,13 @@ championRoutes.get(
 		return res.status(200).json(res.locals.grid);
 	}
 );
+
+championRoutes.get("/headers", makeHeaders, (_req: Request, res: Response) => {
+	return res.sendStatus(200);
+});
+
+// championRoutes.get("/test", testHeader, (_req: Request, res: Response) => {
+// 	return res.sendStatus(200);
+// });
 
 export default championRoutes;
