@@ -97,3 +97,46 @@ export const fetchChampionData = async (): Promise<any> => {
 		throw error;
 	}
 };
+
+interface lineStruct {
+	id: number;
+	name: string;
+	description: string;
+}
+interface skinStruct {
+	id: number;
+	isBase: boolean;
+	name: string;
+	skinType: string;
+	rarity: string;
+	isLegacy: boolean;
+	chromaPath?: any;
+	regionRarityId: number;
+	skinLines?: {
+		id: number,
+	}[];
+	skinAugments?: any;
+	description?: string;
+}
+
+export const fetchSkinData = async (): Promise<any> => {
+	const skinURL =
+		"https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/skins.json";
+	const lineURL =
+		"https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/v1/skinlines.json";
+	const skinJSON = await axios.get<Record<string, skinStruct>>(skinURL);
+	const lineJSON = await axios.get<lineStruct[]>(lineURL);
+	const skins = skinJSON.data;
+	const lines = lineJSON.data;
+	console.log(skins["1001"]);
+	console.log(lines.slice(0, 4));
+
+	const skinEntries = Object.values(skins).slice(0, 20); //only take first 20 for now
+	const champArr = {};
+	for (const skin of skinEntries) {
+		const baseNum = Math.floor(skin.id / 1000);
+	}
+	return skins["1002"];
+	// take all the skinlines, and turn them into arrs with each skin
+	// afterwards, push all arrays ig?
+};

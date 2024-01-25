@@ -1,5 +1,8 @@
 import { Request, Response, NextFunction } from "express";
-import { fetchChampionData } from "../services/championService.js";
+import {
+	fetchChampionData,
+	fetchSkinData,
+} from "../services/championService.js";
 
 import {
 	addNewChampionToDatabase,
@@ -157,6 +160,14 @@ export const makeHeaders = async (
 	return next();
 };
 
+export const testHeader = async (
+	_req: Request,
+	_res: Response,
+	next: NextFunction
+) => {
+	await fetchSkinData();
+	return next();
+};
 /**
  * Mock Data from getChampions
  * https://docs.google.com/document/d/1n1Hp7O9TYVDGzB1jpX7qgnLTOq_MMXieusS22x99eY4/edit?usp=sharing

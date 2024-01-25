@@ -5,6 +5,7 @@ import {
 	buildTags,
 	uploadTags,
 	makeHeaders,
+	testHeader,
 } from "../controllers/championController.js";
 
 const championRoutes = express.Router();
@@ -36,8 +37,8 @@ championRoutes.get("/headers", makeHeaders, (_req: Request, res: Response) => {
 	return res.sendStatus(200);
 });
 
-// championRoutes.get("/test", testHeader, (_req: Request, res: Response) => {
-// 	return res.sendStatus(200);
-// });
+championRoutes.get("/test", testHeader, (_req: Request, res: Response) => {
+	return res.sendStatus(200);
+});
 
 export default championRoutes;
