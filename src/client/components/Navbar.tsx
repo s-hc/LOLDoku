@@ -68,7 +68,11 @@ const Navbar = () => {
 						<div className="flex h-16 items-center">
 							<div className="ml-4 flex lg:ml-0">
 								<Link to="/">
-									<img src={"/LOLDoku.png"} alt="logo" className="h-12" />
+									<img
+										src={"/LOLDoku/LOLDoku.png"}
+										alt="logo"
+										className="h-12"
+									/>
 								</Link>
 							</div>
 							<div className="ml-auto flex items-center">
