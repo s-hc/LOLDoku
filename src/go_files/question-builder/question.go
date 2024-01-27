@@ -8,6 +8,7 @@ import (
 	"time"
 
 	"github.com/jackc/pgx/v5"
+	"github.com/joho/godotenv"
 )
 
 func check(e error, spot string) {
@@ -26,8 +27,9 @@ func main() {
 	
 	temp_URL, ok:= os.LookupEnv("DATABASE_URL")
 	if !ok{
-		fmt.Fprintf(os.Stderr,"database URL missing!\n")
-		os.Exit(1)	
+		err := godotenv.Load("../../.env")
+		check(err, "local env load")
+		temp_URL = os.Getenv("DATABASE_URL")[:87]
 	}
 	conn, err := pgx.Connect(context.Background(), temp_URL)
 	check(err, "database connection")
@@ -48,9 +50,12 @@ func main() {
 	}
 	newQuest := questionJSON{}
 	subrowQuery := `
-	SELECT c.name FROM "Champion" as c
-	LEFT JOIN "Role" as r ON r.champ = c.id
-	WHERE c.faction = $1 AND r.tag = $2
+	SELECT c.name
+	FROM "Champion" c
+	JOIN "ValidChamp" vc1 ON vc1.answer = c.id
+	JOIN "ValidChamp" vc2 ON vc2.answer = c.id
+	JOIN "Header" h1 ON vc1.header = h1.id AND h1.headline = $1
+	JOIN "Header" h2 ON vc2.header = h2.id AND h2.headline = $2;
 	`
 	// var ionian string
 

@@ -20,6 +20,7 @@ model Champion {
   faction  String
   resource String
   tags Role[]
+  headers ValidChamp[]
 }
 
 model Role {
@@ -38,4 +39,20 @@ model Schedule {
   col1 String
   col2 String
   col3 String
+}
+
+model Header{
+  id  Int    @id @default(autoincrement())
+  desc String
+  headline String
+  roleOrFaction Int //role: 1 Faction: 2, neither: 0
+  answers ValidChamp[]
+}
+
+model ValidChamp {
+  id  Int    @id @default(autoincrement())
+  answer Int
+  header Int
+  headerParent Header @relation(fields:[header], references:[id])
+  answerChamp Champion @relation(fields:[answer], references: [id])
 }

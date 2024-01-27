@@ -1,12 +1,19 @@
 import { Request, Response, NextFunction } from "express";
+import { fetchChampionData } from "../services/championService.js";
+
 import {
 	addNewChampionToDatabase,
-	fetchChampionData,
 	isTheChampionInTheDatabase,
 	fetchColsandRows,
 	validateGrid,
 	uploadGrid,
-} from "../services/championService.js";
+} from "../services/dbService.js";
+import {
+	emptyFactions,
+	emptyTags,
+	insertFactions,
+	insertTags,
+} from "../services/headerService.js";
 
 /**
  * Controller to handle the fetching of champion data.
@@ -71,8 +78,8 @@ export const buildTags = async (
 	const [colObj, rowObj] = await fetchColsandRows().catch((error) =>
 		next(error)
 	);
-	const allCols = colObj.map((ele) => ele.faction);
-	const allRows = rowObj.map((ele) => ele.tag);
+	const allCols = colObj.map((ele) => ele.headline);
+	const allRows = rowObj.map((ele) => ele.headline);
 	const fetchThree = (arr: any[]) => {
 		const returnArr = [];
 		if (arr.length < 3) return returnArr;
@@ -133,6 +140,20 @@ export const uploadTags = async (
 	const uploadNum = await uploadGrid(columns, rows).catch((err) => next(err));
 	res.locals.num = uploadNum["id"] ?? -1;
 	console.log("reslocals num is", res.locals.num);
+	return next();
+};
+
+export const makeHeaders = async (
+	_req: Request,
+	_res: Response,
+	next: NextFunction
+) => {
+	const empty = await emptyFactions();
+	console.log(`adding in ${empty.length} factions`);
+	await insertFactions(empty.map((ele) => ele.faction));
+	const tags = await emptyTags();
+	await insertTags(tags.map((ele) => ele.tag));
+	console.log("returning next");
 	return next();
 };
 
