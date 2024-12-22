@@ -44,7 +44,7 @@
 
 ## About
 
-[LOLDoku](s-hc.github.io/LOLDoku/) is an open source spin on the classic Immaculate Grid using champions from the popular MOBA game League of Legends. The goal of the game is to fill in the 3x3 grid with answers that match the clues given. New puzzles are generated daily, and users can sign in (OAuth2.0) to access their stats.
+[LOLDoku](s-hc.github.io/LOLDoku/) is an open source spin on the classic Immaculate Grid using champions from the popular MOBA game League of Legends. The goal of the game is to fill in the 3x3 grid with answers that match the given clues. New puzzles are generated daily, and users can sign in (OAuth2.0) to access their stats.
 
 > [!Important]
 >
